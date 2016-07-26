@@ -1,6 +1,8 @@
 package com.haikong.resources;
 
 import com.alibaba.fastjson.JSONObject;
+import com.haikong.exception.DeviceException;
+import com.haikong.exception.ErrorCode;
 import com.haikong.service.DeviceService;
 import com.haikong.util.CheckUtil;
 import com.haikong.util.DeviceUtil;
@@ -22,6 +24,15 @@ import javax.ws.rs.core.MediaType;
 public class DeviceController {
     @Resource(name = "DeviceService")
     private DeviceService deviceService;
+
+    @GET
+    @Path("/test")
+    public void testException() throws DeviceException {
+        if (1 == 1){
+            throw new DeviceException(ErrorCode.OK);
+        }
+    }
+
     /**
      * 验证设备URL用的方法
      * @param signature

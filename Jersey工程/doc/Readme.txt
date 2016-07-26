@@ -1,1 +1,0 @@
-关于微信设备端做的webservice整合,使用jersey

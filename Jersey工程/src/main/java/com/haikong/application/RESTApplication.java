@@ -12,7 +12,7 @@ public class RESTApplication extends ResourceConfig {
 
     public RESTApplication() {
 
-        packages("com.haikong.resources");
+        packages("com.haikong.resources;com.haikong.exception");
         register(LoggingFilter.class);
         register(JacksonJsonProvider.class);
 
