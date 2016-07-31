@@ -2,7 +2,7 @@
 
 1.SSM-Demo
 ----------
-使用maven整合的Spring,SpringMVC,Mybatis的案例,可以直接拿过来使用,进行开发.
+使用maven整合的Spring,SpringMVC,Mybatis的案例,数据库使用mysql,数据源为druid,可以直接拿过来使用,进行开发.
 
 
 ----------
