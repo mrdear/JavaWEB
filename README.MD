@@ -13,11 +13,10 @@
 
 
 ----------
-<<<<<<< HEAD
 
 3.Spring-Boot-Demo
 --------------
 该Demo是做学习Spring-Boot时整合环境,整合了thymeleaf,Mybatis,Druid,可以拉下来直接进行二次开发,如果是WebService服务的话,去掉thymeleaf即可.
-=======
-3.待添加
->>>>>>> origin/master
+
+----------
+4.待添加
