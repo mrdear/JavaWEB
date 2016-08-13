@@ -2,7 +2,7 @@
 
 1.SSM-Demo
 ----------
-使用maven整合的Spring,SpringMVC,Mybatis的案例,可以直接拿过来使用,进行开发.
+使用maven整合的Spring,SpringMVC,Mybatis的案例,数据库使用mysql,数据源为druid,可以直接拿过来使用,进行开发.
 
 
 ----------
@@ -13,7 +13,11 @@
 
 
 ----------
+<<<<<<< HEAD
 
 3.Spring-Boot-Demo
 --------------
 该Demo是做学习Spring-Boot时整合环境,整合了thymeleaf,Mybatis,Druid,可以拉下来直接进行二次开发,如果是WebService服务的话,去掉thymeleaf即可.
+=======
+3.待添加
+>>>>>>> origin/master
