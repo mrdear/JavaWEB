@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.mybatis.caches:mybatis-ehcache:1.0.3">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/mybatis/caches/mybatis-ehcache/1.0.3/mybatis-ehcache-1.0.3.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/mybatis/caches/mybatis-ehcache/1.0.3/mybatis-ehcache-1.0.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/mybatis/caches/mybatis-ehcache/1.0.3/mybatis-ehcache-1.0.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

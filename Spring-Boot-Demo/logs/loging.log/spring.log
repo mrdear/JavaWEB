@@ -1536,3 +1536,756 @@
 2016-08-13 12:07:05.319 TRACE 9492 --- [http-nio-8080-exec-1] cn.mrdear.mapper.UserMapper.findById     : <==    Columns: id, username, password
 2016-08-13 12:07:05.319 TRACE 9492 --- [http-nio-8080-exec-1] cn.mrdear.mapper.UserMapper.findById     : <==        Row: 1, niuli, 123456
 2016-08-13 12:07:05.322 DEBUG 9492 --- [http-nio-8080-exec-1] cn.mrdear.mapper.UserMapper.findById     : <==      Total: 1
+2016-08-13 23:39:10.710  INFO 14516 --- [main] cn.mrdear.Application                    : Starting Application on DESKTOP-KAR3OG3 with PID 14516 (F:\Git\SpringBoot\target\classes started by 牛李 in F:\Git\SpringBoot)
+2016-08-13 23:39:10.742 DEBUG 14516 --- [main] cn.mrdear.Application                    : Running with Spring Boot v1.4.0.RELEASE, Spring v4.3.2.RELEASE
+2016-08-13 23:39:10.743  INFO 14516 --- [main] cn.mrdear.Application                    : No active profile set, falling back to default profiles: default
+2016-08-13 23:39:11.523  INFO 14516 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4a07d605: startup date [Sat Aug 13 23:39:11 CST 2016]; root of context hierarchy
+2016-08-13 23:39:13.093  INFO 14516 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSourcesConfig' of type [class cn.mrdear.conf.DataSourcesConfig$$EnhancerBySpringCGLIB$$37f33322] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:39:13.622  INFO 14516 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2016-08-13 23:39:13.672  INFO 14516 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [class com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:39:13.679  INFO 14516 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$cab08ac3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:39:13.867  INFO 14516 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:39:13.873  INFO 14516 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSourceInitializer' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:39:13.875  INFO 14516 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatisConfig' of type [class cn.mrdear.conf.MybatisConfig$$EnhancerBySpringCGLIB$$381d3927] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:39:13.932  INFO 14516 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'transactionManager' of type [class org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:39:13.933  INFO 14516 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e8bce763] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:39:14.468  INFO 14516 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-08-13 23:39:14.482  INFO 14516 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-08-13 23:39:14.483  INFO 14516 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-13 23:39:14.600  INFO 14516 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-08-13 23:39:14.601  INFO 14516 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3080 ms
+2016-08-13 23:39:14.763  INFO 14516 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2016-08-13 23:39:14.765  INFO 14516 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-13 23:39:14.768  INFO 14516 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-13 23:39:14.768  INFO 14516 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-13 23:39:14.768  INFO 14516 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-13 23:39:14.768  INFO 14516 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-13 23:39:14.769  INFO 14516 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2016-08-13 23:39:14.769  INFO 14516 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'gzipFilter' to urls: [*.js, *.css, *.json, *.html]
+2016-08-13 23:39:15.474  INFO 14516 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4a07d605: startup date [Sat Aug 13 23:39:11 CST 2016]; root of context hierarchy
+2016-08-13 23:39:15.567  INFO 14516 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello],methods=[GET]}" onto public java.lang.String cn.mrdear.controller.HelloController.hello(org.springframework.ui.Model)
+2016-08-13 23:39:15.568  INFO 14516 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public cn.mrdear.entity.User cn.mrdear.controller.HelloController.testUserDao()
+2016-08-13 23:39:15.571  INFO 14516 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-13 23:39:15.572  INFO 14516 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-13 23:39:15.613  INFO 14516 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-13 23:39:15.613  INFO 14516 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-13 23:39:15.670  INFO 14516 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-13 23:39:16.604  INFO 14516 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-08-13 23:39:16.611  INFO 14516 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2016-08-13 23:39:16.616  INFO 14516 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2016-08-13 23:39:16.696  INFO 14516 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-08-13 23:39:16.709  INFO 14516 --- [main] cn.mrdear.Application                    : Started Application in 6.76 seconds (JVM running for 8.054)
+2016-08-13 23:39:57.680  INFO 14516 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-13 23:39:57.680  INFO 14516 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-13 23:39:57.705  INFO 14516 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 25 ms
+2016-08-13 23:42:05.961  INFO 6628 --- [main] cn.mrdear.Application                    : Starting Application on DESKTOP-KAR3OG3 with PID 6628 (F:\Git\SpringBoot\target\classes started by 牛李 in F:\Git\SpringBoot)
+2016-08-13 23:42:05.965 DEBUG 6628 --- [main] cn.mrdear.Application                    : Running with Spring Boot v1.4.0.RELEASE, Spring v4.3.2.RELEASE
+2016-08-13 23:42:05.965  INFO 6628 --- [main] cn.mrdear.Application                    : No active profile set, falling back to default profiles: default
+2016-08-13 23:42:06.285  INFO 6628 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4a07d605: startup date [Sat Aug 13 23:42:06 CST 2016]; root of context hierarchy
+2016-08-13 23:42:07.233  INFO 6628 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSourcesConfig' of type [class cn.mrdear.conf.DataSourcesConfig$$EnhancerBySpringCGLIB$$cd34948] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:42:07.547  INFO 6628 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2016-08-13 23:42:07.587  INFO 6628 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [class com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:42:07.593  INFO 6628 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$9f90a0e9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:42:07.746  INFO 6628 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:42:07.751  INFO 6628 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSourceInitializer' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:42:07.752  INFO 6628 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatisConfig' of type [class cn.mrdear.conf.MybatisConfig$$EnhancerBySpringCGLIB$$cfd4f4d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:42:07.768  INFO 6628 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'transactionManager' of type [class org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:42:07.769  INFO 6628 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bd9cfd89] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:42:08.216  INFO 6628 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-08-13 23:42:08.226  INFO 6628 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-08-13 23:42:08.227  INFO 6628 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-13 23:42:08.332  INFO 6628 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-08-13 23:42:08.332  INFO 6628 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2050 ms
+2016-08-13 23:42:08.486  INFO 6628 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2016-08-13 23:42:08.487  INFO 6628 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-13 23:42:08.490  INFO 6628 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-13 23:42:08.491  INFO 6628 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-13 23:42:08.491  INFO 6628 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-13 23:42:08.491  INFO 6628 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-13 23:42:08.491  INFO 6628 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2016-08-13 23:42:08.492  INFO 6628 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'gzipFilter' to urls: [/*]
+2016-08-13 23:42:09.060  INFO 6628 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4a07d605: startup date [Sat Aug 13 23:42:06 CST 2016]; root of context hierarchy
+2016-08-13 23:42:09.139  INFO 6628 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello],methods=[GET]}" onto public java.lang.String cn.mrdear.controller.HelloController.hello(org.springframework.ui.Model)
+2016-08-13 23:42:09.140  INFO 6628 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public cn.mrdear.entity.User cn.mrdear.controller.HelloController.testUserDao()
+2016-08-13 23:42:09.142  INFO 6628 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-13 23:42:09.142  INFO 6628 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-13 23:42:09.182  INFO 6628 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-13 23:42:09.182  INFO 6628 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-13 23:42:09.226  INFO 6628 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-13 23:42:09.944  INFO 6628 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-08-13 23:42:09.946  INFO 6628 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2016-08-13 23:42:09.952  INFO 6628 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2016-08-13 23:42:10.017  INFO 6628 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-08-13 23:42:10.022  INFO 6628 --- [main] cn.mrdear.Application                    : Started Application in 4.58 seconds (JVM running for 5.026)
+2016-08-13 23:42:17.014  INFO 6628 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-13 23:42:17.014  INFO 6628 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-13 23:42:17.033  INFO 6628 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2016-08-13 23:42:44.593  INFO 7500 --- [main] cn.mrdear.Application                    : Starting Application on DESKTOP-KAR3OG3 with PID 7500 (F:\Git\SpringBoot\target\classes started by 牛李 in F:\Git\SpringBoot)
+2016-08-13 23:42:44.597 DEBUG 7500 --- [main] cn.mrdear.Application                    : Running with Spring Boot v1.4.0.RELEASE, Spring v4.3.2.RELEASE
+2016-08-13 23:42:44.598  INFO 7500 --- [main] cn.mrdear.Application                    : No active profile set, falling back to default profiles: default
+2016-08-13 23:42:45.020  INFO 7500 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4a07d605: startup date [Sat Aug 13 23:42:45 CST 2016]; root of context hierarchy
+2016-08-13 23:42:45.952  INFO 7500 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSourcesConfig' of type [class cn.mrdear.conf.DataSourcesConfig$$EnhancerBySpringCGLIB$$bde6ccad] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:42:46.259  INFO 7500 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2016-08-13 23:42:46.310  INFO 7500 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [class com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:42:46.316  INFO 7500 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$50a4244e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:42:46.483  INFO 7500 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:42:46.488  INFO 7500 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSourceInitializer' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:42:46.490  INFO 7500 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatisConfig' of type [class cn.mrdear.conf.MybatisConfig$$EnhancerBySpringCGLIB$$be10d2b2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:42:46.502  INFO 7500 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'transactionManager' of type [class org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:42:46.503  INFO 7500 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6eb080ee] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:42:46.939  INFO 7500 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-08-13 23:42:46.955  INFO 7500 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-08-13 23:42:46.957  INFO 7500 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-13 23:42:47.061  INFO 7500 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-08-13 23:42:47.062  INFO 7500 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2045 ms
+2016-08-13 23:42:47.252  INFO 7500 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2016-08-13 23:42:47.254  INFO 7500 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-13 23:42:47.258  INFO 7500 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-13 23:42:47.259  INFO 7500 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-13 23:42:47.259  INFO 7500 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-13 23:42:47.259  INFO 7500 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-13 23:42:47.260  INFO 7500 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2016-08-13 23:42:47.861  INFO 7500 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4a07d605: startup date [Sat Aug 13 23:42:45 CST 2016]; root of context hierarchy
+2016-08-13 23:42:47.936  INFO 7500 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello],methods=[GET]}" onto public java.lang.String cn.mrdear.controller.HelloController.hello(org.springframework.ui.Model)
+2016-08-13 23:42:47.937  INFO 7500 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public cn.mrdear.entity.User cn.mrdear.controller.HelloController.testUserDao()
+2016-08-13 23:42:47.939  INFO 7500 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-13 23:42:47.939  INFO 7500 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-13 23:42:47.974  INFO 7500 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-13 23:42:47.974  INFO 7500 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-13 23:42:48.015  INFO 7500 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-13 23:42:48.733  INFO 7500 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-08-13 23:42:48.734  INFO 7500 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2016-08-13 23:42:48.739  INFO 7500 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2016-08-13 23:42:48.803  INFO 7500 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-08-13 23:42:48.808  INFO 7500 --- [main] cn.mrdear.Application                    : Started Application in 4.748 seconds (JVM running for 5.202)
+2016-08-13 23:42:56.608  INFO 7500 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-13 23:42:56.609  INFO 7500 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-13 23:42:56.625  INFO 7500 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+2016-08-13 23:43:29.764  INFO 15904 --- [main] cn.mrdear.Application                    : Starting Application on DESKTOP-KAR3OG3 with PID 15904 (F:\Git\SpringBoot\target\classes started by 牛李 in F:\Git\SpringBoot)
+2016-08-13 23:43:29.769 DEBUG 15904 --- [main] cn.mrdear.Application                    : Running with Spring Boot v1.4.0.RELEASE, Spring v4.3.2.RELEASE
+2016-08-13 23:43:29.771  INFO 15904 --- [main] cn.mrdear.Application                    : No active profile set, falling back to default profiles: default
+2016-08-13 23:43:30.181  INFO 15904 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4a07d605: startup date [Sat Aug 13 23:43:30 CST 2016]; root of context hierarchy
+2016-08-13 23:43:31.156  INFO 15904 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSourcesConfig' of type [class cn.mrdear.conf.DataSourcesConfig$$EnhancerBySpringCGLIB$$cd34948] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:43:31.495  INFO 15904 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2016-08-13 23:43:31.534  INFO 15904 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [class com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:43:31.540  INFO 15904 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$9f90a0e9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:43:31.685  INFO 15904 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:43:31.689  INFO 15904 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSourceInitializer' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:43:31.691  INFO 15904 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatisConfig' of type [class cn.mrdear.conf.MybatisConfig$$EnhancerBySpringCGLIB$$cfd4f4d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:43:31.708  INFO 15904 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'transactionManager' of type [class org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:43:31.709  INFO 15904 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bd9cfd89] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:43:32.156  INFO 15904 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-08-13 23:43:32.170  INFO 15904 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-08-13 23:43:32.171  INFO 15904 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-13 23:43:32.268  INFO 15904 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-08-13 23:43:32.269  INFO 15904 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2092 ms
+2016-08-13 23:43:32.483  INFO 15904 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2016-08-13 23:43:32.484  INFO 15904 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-13 23:43:32.487  INFO 15904 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-13 23:43:32.488  INFO 15904 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-13 23:43:32.488  INFO 15904 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-13 23:43:32.488  INFO 15904 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-13 23:43:32.488  INFO 15904 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2016-08-13 23:43:32.488  INFO 15904 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'gzipFilter' to urls: [/*]
+2016-08-13 23:43:33.093  INFO 15904 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4a07d605: startup date [Sat Aug 13 23:43:30 CST 2016]; root of context hierarchy
+2016-08-13 23:43:33.179  INFO 15904 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello],methods=[GET]}" onto public java.lang.String cn.mrdear.controller.HelloController.hello(org.springframework.ui.Model)
+2016-08-13 23:43:33.180  INFO 15904 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public cn.mrdear.entity.User cn.mrdear.controller.HelloController.testUserDao()
+2016-08-13 23:43:33.183  INFO 15904 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-13 23:43:33.183  INFO 15904 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-13 23:43:33.226  INFO 15904 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-13 23:43:33.226  INFO 15904 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-13 23:43:33.270  INFO 15904 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-13 23:43:34.042  INFO 15904 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-08-13 23:43:34.044  INFO 15904 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2016-08-13 23:43:34.049  INFO 15904 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2016-08-13 23:43:34.110  INFO 15904 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-08-13 23:43:34.115  INFO 15904 --- [main] cn.mrdear.Application                    : Started Application in 4.952 seconds (JVM running for 5.385)
+2016-08-13 23:43:36.845  INFO 15904 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-13 23:43:36.846  INFO 15904 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-13 23:43:36.864  INFO 15904 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2016-08-13 23:46:19.868  INFO 8584 --- [main] cn.mrdear.Application                    : Starting Application on DESKTOP-KAR3OG3 with PID 8584 (F:\Git\SpringBoot\target\classes started by 牛李 in F:\Git\SpringBoot)
+2016-08-13 23:46:19.871 DEBUG 8584 --- [main] cn.mrdear.Application                    : Running with Spring Boot v1.4.0.RELEASE, Spring v4.3.2.RELEASE
+2016-08-13 23:46:19.872  INFO 8584 --- [main] cn.mrdear.Application                    : No active profile set, falling back to default profiles: default
+2016-08-13 23:46:20.248  INFO 8584 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4a07d605: startup date [Sat Aug 13 23:46:20 CST 2016]; root of context hierarchy
+2016-08-13 23:46:21.221  INFO 8584 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSourcesConfig' of type [class cn.mrdear.conf.DataSourcesConfig$$EnhancerBySpringCGLIB$$37f33322] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:46:21.548  INFO 8584 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2016-08-13 23:46:21.592  INFO 8584 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [class com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:46:21.599  INFO 8584 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$cab08ac3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:46:21.744  INFO 8584 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:46:21.748  INFO 8584 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSourceInitializer' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:46:21.750  INFO 8584 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatisConfig' of type [class cn.mrdear.conf.MybatisConfig$$EnhancerBySpringCGLIB$$381d3927] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:46:21.767  INFO 8584 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'transactionManager' of type [class org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:46:21.768  INFO 8584 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e8bce763] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:46:22.214  INFO 8584 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-08-13 23:46:22.225  INFO 8584 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-08-13 23:46:22.226  INFO 8584 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-13 23:46:22.322  INFO 8584 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-08-13 23:46:22.322  INFO 8584 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2078 ms
+2016-08-13 23:46:22.487  INFO 8584 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2016-08-13 23:46:22.488  INFO 8584 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-13 23:46:22.491  INFO 8584 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-13 23:46:22.492  INFO 8584 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-13 23:46:22.492  INFO 8584 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-13 23:46:22.492  INFO 8584 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-13 23:46:22.493  INFO 8584 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2016-08-13 23:46:22.493  INFO 8584 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'gzipFilter' to urls: [*.js, *.css, *.json, *.html]
+2016-08-13 23:46:23.088  INFO 8584 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4a07d605: startup date [Sat Aug 13 23:46:20 CST 2016]; root of context hierarchy
+2016-08-13 23:46:23.164  INFO 8584 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello],methods=[GET]}" onto public java.lang.String cn.mrdear.controller.HelloController.hello(org.springframework.ui.Model)
+2016-08-13 23:46:23.165  INFO 8584 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public cn.mrdear.entity.User cn.mrdear.controller.HelloController.testUserDao()
+2016-08-13 23:46:23.167  INFO 8584 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-13 23:46:23.168  INFO 8584 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-13 23:46:23.200  INFO 8584 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-13 23:46:23.200  INFO 8584 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-13 23:46:23.238  INFO 8584 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-13 23:46:23.972  INFO 8584 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-08-13 23:46:23.973  INFO 8584 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2016-08-13 23:46:23.979  INFO 8584 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2016-08-13 23:46:24.040  INFO 8584 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-08-13 23:46:24.044  INFO 8584 --- [main] cn.mrdear.Application                    : Started Application in 4.726 seconds (JVM running for 5.218)
+2016-08-13 23:46:32.707  INFO 8584 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-13 23:46:32.707  INFO 8584 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-13 23:46:32.725  INFO 8584 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2016-08-13 23:50:28.347  INFO 6948 --- [main] cn.mrdear.Application                    : Starting Application on DESKTOP-KAR3OG3 with PID 6948 (F:\Git\SpringBoot\target\classes started by 牛李 in F:\Git\SpringBoot)
+2016-08-13 23:50:28.351 DEBUG 6948 --- [main] cn.mrdear.Application                    : Running with Spring Boot v1.4.0.RELEASE, Spring v4.3.2.RELEASE
+2016-08-13 23:50:28.351  INFO 6948 --- [main] cn.mrdear.Application                    : No active profile set, falling back to default profiles: default
+2016-08-13 23:50:28.749  INFO 6948 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4a07d605: startup date [Sat Aug 13 23:50:28 CST 2016]; root of context hierarchy
+2016-08-13 23:50:29.777  INFO 6948 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSourcesConfig' of type [class cn.mrdear.conf.DataSourcesConfig$$EnhancerBySpringCGLIB$$31714fc2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:50:30.091  INFO 6948 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2016-08-13 23:50:30.134  INFO 6948 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [class com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:50:30.138  INFO 6948 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$c42ea763] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:50:30.302  INFO 6948 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:50:30.309  INFO 6948 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSourceInitializer' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:50:30.311  INFO 6948 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatisConfig' of type [class cn.mrdear.conf.MybatisConfig$$EnhancerBySpringCGLIB$$319b55c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:50:30.331  INFO 6948 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'transactionManager' of type [class org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:50:30.332  INFO 6948 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e23b0403] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:50:30.777  INFO 6948 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-08-13 23:50:30.791  INFO 6948 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-08-13 23:50:30.793  INFO 6948 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-13 23:50:30.885  INFO 6948 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-08-13 23:50:30.885  INFO 6948 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2140 ms
+2016-08-13 23:50:31.072  INFO 6948 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2016-08-13 23:50:31.074  INFO 6948 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-13 23:50:31.079  INFO 6948 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-13 23:50:31.079  INFO 6948 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-13 23:50:31.080  INFO 6948 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-13 23:50:31.080  INFO 6948 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-13 23:50:31.080  INFO 6948 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2016-08-13 23:50:31.080  INFO 6948 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'gzipFilter' to urls: [*.js, *.css, *.json, *.html]
+2016-08-13 23:50:31.081  INFO 6948 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'simplePageCachingFilter' to urls: [/hello]
+2016-08-13 23:50:31.866  INFO 6948 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4a07d605: startup date [Sat Aug 13 23:50:28 CST 2016]; root of context hierarchy
+2016-08-13 23:50:31.940  INFO 6948 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public cn.mrdear.entity.User cn.mrdear.controller.HelloController.testUserDao()
+2016-08-13 23:50:31.942  INFO 6948 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello],methods=[GET]}" onto public java.lang.String cn.mrdear.controller.HelloController.hello(org.springframework.ui.Model)
+2016-08-13 23:50:31.944  INFO 6948 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-13 23:50:31.944  INFO 6948 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-13 23:50:31.980  INFO 6948 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-13 23:50:31.981  INFO 6948 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-13 23:50:32.027  INFO 6948 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-13 23:50:32.802  INFO 6948 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-08-13 23:50:32.803  INFO 6948 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2016-08-13 23:50:32.808  INFO 6948 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2016-08-13 23:50:32.856  INFO 6948 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-08-13 23:50:32.862  INFO 6948 --- [main] cn.mrdear.Application                    : Started Application in 5.033 seconds (JVM running for 5.49)
+2016-08-13 23:50:41.808  INFO 6948 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-13 23:50:41.808  INFO 6948 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-13 23:50:41.825  INFO 6948 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+2016-08-13 23:55:26.204  INFO 4212 --- [main] cn.mrdear.Application                    : Starting Application on DESKTOP-KAR3OG3 with PID 4212 (F:\Git\SpringBoot\target\classes started by 牛李 in F:\Git\SpringBoot)
+2016-08-13 23:55:26.208 DEBUG 4212 --- [main] cn.mrdear.Application                    : Running with Spring Boot v1.4.0.RELEASE, Spring v4.3.2.RELEASE
+2016-08-13 23:55:26.209  INFO 4212 --- [main] cn.mrdear.Application                    : No active profile set, falling back to default profiles: default
+2016-08-13 23:55:26.540  INFO 4212 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@74287ea3: startup date [Sat Aug 13 23:55:26 CST 2016]; root of context hierarchy
+2016-08-13 23:55:27.492  INFO 4212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSourcesConfig' of type [class cn.mrdear.conf.DataSourcesConfig$$EnhancerBySpringCGLIB$$83f57c56] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:55:27.798  INFO 4212 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2016-08-13 23:55:27.836  INFO 4212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [class com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:55:27.848  INFO 4212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$16b2d3f7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:55:27.996  INFO 4212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:55:28.001  INFO 4212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSourceInitializer' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:55:28.003  INFO 4212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatisConfig' of type [class cn.mrdear.conf.MybatisConfig$$EnhancerBySpringCGLIB$$841f825b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:55:28.019  INFO 4212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'transactionManager' of type [class org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:55:28.020  INFO 4212 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$34bf3097] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:55:28.444  INFO 4212 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-08-13 23:55:28.457  INFO 4212 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-08-13 23:55:28.459  INFO 4212 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-13 23:55:28.564  INFO 4212 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-08-13 23:55:28.565  INFO 4212 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2029 ms
+2016-08-13 23:55:28.760  INFO 4212 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2016-08-13 23:55:28.762  INFO 4212 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-13 23:55:28.765  INFO 4212 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-13 23:55:28.766  INFO 4212 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-13 23:55:28.766  INFO 4212 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-13 23:55:28.766  INFO 4212 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-13 23:55:28.766  INFO 4212 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2016-08-13 23:55:28.766  INFO 4212 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'gzipFilter' to urls: [*.js, *.css, *.json, *.html]
+2016-08-13 23:55:28.766  INFO 4212 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'simplePageCachingFilter' to urls: [/hello]
+2016-08-13 23:55:28.787 DEBUG 4212 --- [localhost-startStop-1] n.s.e.constructs.web.filter.Filter       : Suppression of stack traces enabled for net.sf.ehcache.constructs.web.filter.SimplePageCachingFilter
+2016-08-13 23:55:28.787 DEBUG 4212 --- [localhost-startStop-1] n.s.e.c.w.f.SimplePageCachingFilter      : Using configured cacheName of hello.
+2016-08-13 23:55:28.809 DEBUG 4212 --- [localhost-startStop-1] n.s.ehcache.config.ConfigurationFactory  : Configuring ehcache from ehcache.xml found in the classpath: file:/F:/Git/SpringBoot/target/classes/ehcache.xml
+2016-08-13 23:55:28.810 DEBUG 4212 --- [localhost-startStop-1] n.s.ehcache.config.ConfigurationFactory  : Configuring ehcache from URL: file:/F:/Git/SpringBoot/target/classes/ehcache.xml
+2016-08-13 23:55:28.810 DEBUG 4212 --- [localhost-startStop-1] n.s.ehcache.config.ConfigurationFactory  : Configuring ehcache from InputStream
+2016-08-13 23:55:28.827 DEBUG 4212 --- [localhost-startStop-1] net.sf.ehcache.config.BeanHandler        : Ignoring ehcache attribute xmlns:xsi
+2016-08-13 23:55:28.828 DEBUG 4212 --- [localhost-startStop-1] net.sf.ehcache.config.BeanHandler        : Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+2016-08-13 23:55:28.829 DEBUG 4212 --- [localhost-startStop-1] n.s.e.config.DiskStoreConfiguration      : Disk Store Path: E:\test
+2016-08-13 23:55:28.841 DEBUG 4212 --- [localhost-startStop-1] net.sf.ehcache.CacheManager              : Creating new CacheManager with default config
+2016-08-13 23:55:28.843 DEBUG 4212 --- [localhost-startStop-1] net.sf.ehcache.util.PropertyUtil         : propertiesString is null.
+2016-08-13 23:55:28.850 DEBUG 4212 --- [localhost-startStop-1] n.sf.ehcache.config.ConfigurationHelper  : No CacheManagerEventListenerFactory class specified. Skipping...
+2016-08-13 23:55:28.959 DEBUG 4212 --- [localhost-startStop-1] net.sf.ehcache.Cache                     : No BootstrapCacheLoaderFactory class specified. Skipping...
+2016-08-13 23:55:28.959 DEBUG 4212 --- [localhost-startStop-1] net.sf.ehcache.Cache                     : CacheWriter factory not configured. Skipping...
+2016-08-13 23:55:28.959 DEBUG 4212 --- [localhost-startStop-1] n.sf.ehcache.config.ConfigurationHelper  : No CacheExceptionHandlerFactory class specified. Skipping...
+2016-08-13 23:55:28.965 DEBUG 4212 --- [localhost-startStop-1] net.sf.ehcache.Cache                     : No BootstrapCacheLoaderFactory class specified. Skipping...
+2016-08-13 23:55:28.966 DEBUG 4212 --- [localhost-startStop-1] net.sf.ehcache.Cache                     : CacheWriter factory not configured. Skipping...
+2016-08-13 23:55:28.966 DEBUG 4212 --- [localhost-startStop-1] n.sf.ehcache.config.ConfigurationHelper  : No CacheExceptionHandlerFactory class specified. Skipping...
+2016-08-13 23:55:28.982 DEBUG 4212 --- [localhost-startStop-1] net.sf.ehcache.DiskStorePathManager      : Using diskstore path E:\test
+2016-08-13 23:55:28.982 DEBUG 4212 --- [localhost-startStop-1] net.sf.ehcache.DiskStorePathManager      : Holding exclusive lock on E:\test\.ehcache-diskstore.lock
+2016-08-13 23:55:28.983 DEBUG 4212 --- [localhost-startStop-1] n.s.e.store.disk.DiskStorageFactory      : Failed to delete file hello.index
+2016-08-13 23:55:28.989 DEBUG 4212 --- [localhost-startStop-1] n.s.e.store.disk.DiskStorageFactory      : Matching data file missing (or empty) for index file. Deleting index file E:\test\hello.index
+2016-08-13 23:55:28.990 DEBUG 4212 --- [localhost-startStop-1] n.s.e.store.disk.DiskStorageFactory      : Failed to delete file hello.index
+2016-08-13 23:55:29.030 DEBUG 4212 --- [localhost-startStop-1] n.s.e.s.extended.ExtendedStatisticsImpl  : Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE
+2016-08-13 23:55:29.031 DEBUG 4212 --- [localhost-startStop-1] n.s.e.s.extended.ExtendedStatisticsImpl  : Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE_BYTES
+2016-08-13 23:55:29.031 DEBUG 4212 --- [localhost-startStop-1] n.s.e.s.extended.ExtendedStatisticsImpl  : Mocking Pass-Through Statistic: WRITER_QUEUE_LENGTH
+2016-08-13 23:55:29.031 DEBUG 4212 --- [localhost-startStop-1] n.s.e.s.extended.ExtendedStatisticsImpl  : Mocking Pass-Through Statistic: REMOTE_SIZE
+2016-08-13 23:55:29.031 DEBUG 4212 --- [localhost-startStop-1] n.s.e.s.extended.ExtendedStatisticsImpl  : Mocking Pass-Through Statistic: LAST_REJOIN_TIMESTAMP
+2016-08-13 23:55:29.040 DEBUG 4212 --- [localhost-startStop-1] n.s.e.s.extended.ExtendedStatisticsImpl  : Mocking Operation Statistic: OFFHEAP_GET
+2016-08-13 23:55:29.041 DEBUG 4212 --- [localhost-startStop-1] n.s.e.s.extended.ExtendedStatisticsImpl  : Mocking Operation Statistic: OFFHEAP_PUT
+2016-08-13 23:55:29.041 DEBUG 4212 --- [localhost-startStop-1] n.s.e.s.extended.ExtendedStatisticsImpl  : Mocking Operation Statistic: OFFHEAP_REMOVE
+2016-08-13 23:55:29.042 DEBUG 4212 --- [localhost-startStop-1] n.s.e.s.extended.ExtendedStatisticsImpl  : Mocking Operation Statistic: XA_COMMIT
+2016-08-13 23:55:29.043 DEBUG 4212 --- [localhost-startStop-1] n.s.e.s.extended.ExtendedStatisticsImpl  : Mocking Operation Statistic: XA_ROLLBACK
+2016-08-13 23:55:29.043 DEBUG 4212 --- [localhost-startStop-1] n.s.e.s.extended.ExtendedStatisticsImpl  : Mocking Operation Statistic: XA_RECOVERY
+2016-08-13 23:55:29.043 DEBUG 4212 --- [localhost-startStop-1] n.s.e.s.extended.ExtendedStatisticsImpl  : Mocking Operation Statistic: CLUSTER_EVENT
+2016-08-13 23:55:29.043 DEBUG 4212 --- [localhost-startStop-1] n.s.e.s.extended.ExtendedStatisticsImpl  : Mocking Operation Statistic: NONSTOP
+2016-08-13 23:55:29.050 DEBUG 4212 --- [localhost-startStop-1] net.sf.ehcache.Cache                     : Initialised cache: hello
+2016-08-13 23:55:29.050 DEBUG 4212 --- [localhost-startStop-1] n.sf.ehcache.config.ConfigurationHelper  : CacheDecoratorFactory not configured. Skipping for 'hello'.
+2016-08-13 23:55:29.050 DEBUG 4212 --- [localhost-startStop-1] n.sf.ehcache.config.ConfigurationHelper  : CacheDecoratorFactory not configured for defaultCache. Skipping for 'hello'.
+2016-08-13 23:55:29.056 DEBUG 4212 --- [localhost-startStop-1] net.sf.ehcache.CacheManager              : Attempting to create an existing singleton. Existing singleton returned.
+2016-08-13 23:55:29.056 DEBUG 4212 --- [localhost-startStop-1] net.sf.ehcache.CacheManager              : Attempting to create an existing singleton. Existing singleton returned.
+2016-08-13 23:55:29.057 DEBUG 4212 --- [localhost-startStop-1] n.s.e.constructs.web.filter.Filter       : Suppression of stack traces enabled for net.sf.ehcache.constructs.web.filter.GzipFilter
+2016-08-13 23:55:29.189  WARN 4212 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'helloController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [F:\Git\SpringBoot\target\classes\cn\mrdear\mapper\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory': Error creating bean with name 'sqlSessionFactory' defined in class path resource [cn/mrdear/conf/MybatisConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactoryBean' threw exception; nested exception is java.lang.RuntimeException: sqlSessionFactory init fail; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [cn/mrdear/conf/MybatisConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactoryBean' threw exception; nested exception is java.lang.RuntimeException: sqlSessionFactory init fail
+2016-08-13 23:55:29.192  INFO 4212 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2016-08-13 23:55:29.193  INFO 4212 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2016-08-13 23:55:29.196  WARN 4212 --- [localhost-startStop-1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [__DEFAULT__] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.lang.Object.wait(Object.java:502)
+ java.util.TimerThread.mainLoop(Timer.java:526)
+ java.util.TimerThread.run(Timer.java:505)
+2016-08-13 23:55:29.197  WARN 4212 --- [localhost-startStop-1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [hello.data] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+2016-08-13 23:55:29.197  WARN 4212 --- [localhost-startStop-1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [Statistics Thread-__DEFAULT__-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:215)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2078)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1093)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1067)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1127)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+ java.lang.Thread.run(Thread.java:745)
+2016-08-13 23:55:29.204  INFO 4212 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report enable debug logging (start with --debug)
+
+
+2016-08-13 23:55:29.248 ERROR 4212 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'helloController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [F:\Git\SpringBoot\target\classes\cn\mrdear\mapper\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory': Error creating bean with name 'sqlSessionFactory' defined in class path resource [cn/mrdear/conf/MybatisConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactoryBean' threw exception; nested exception is java.lang.RuntimeException: sqlSessionFactory init fail; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [cn/mrdear/conf/MybatisConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactoryBean' threw exception; nested exception is java.lang.RuntimeException: sqlSessionFactory init fail
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:321) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:776) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:861) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:369) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1185) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1174) [spring-boot-1.4.0.RELEASE.jar:1.4.0.RELEASE]
+	at cn.mrdear.Application.main(Application.java:14) [classes/:na]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [F:\Git\SpringBoot\target\classes\cn\mrdear\mapper\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory': Error creating bean with name 'sqlSessionFactory' defined in class path resource [cn/mrdear/conf/MybatisConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactoryBean' threw exception; nested exception is java.lang.RuntimeException: sqlSessionFactory init fail; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [cn/mrdear/conf/MybatisConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactoryBean' threw exception; nested exception is java.lang.RuntimeException: sqlSessionFactory init fail
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1307) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1199) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:522) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:496) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:627) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:169) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:318) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	... 17 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [cn/mrdear/conf/MybatisConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactoryBean' threw exception; nested exception is java.lang.RuntimeException: sqlSessionFactory init fail
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:599) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1123) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1018) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:510) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:207) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1214) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1054) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1019) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1292) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	... 30 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactoryBean' threw exception; nested exception is java.lang.RuntimeException: sqlSessionFactory init fail
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:189) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:588) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	... 43 common frames omitted
+Caused by: java.lang.RuntimeException: sqlSessionFactory init fail
+	at cn.mrdear.conf.MybatisConfig.sqlSessionFactoryBean(MybatisConfig.java:71) ~[classes/:na]
+	at cn.mrdear.conf.MybatisConfig$$EnhancerBySpringCGLIB$$841f825b.CGLIB$sqlSessionFactoryBean$2(<generated>) ~[classes/:na]
+	at cn.mrdear.conf.MybatisConfig$$EnhancerBySpringCGLIB$$841f825b$$FastClassBySpringCGLIB$$c9f8abb2.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228) ~[spring-core-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:356) ~[spring-context-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	at cn.mrdear.conf.MybatisConfig$$EnhancerBySpringCGLIB$$841f825b.sqlSessionFactoryBean(<generated>) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_77]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_77]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_77]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_77]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:162) ~[spring-beans-4.3.2.RELEASE.jar:4.3.2.RELEASE]
+	... 44 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [F:\Git\SpringBoot\target\classes\mapper\UserMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'org.mybatis.caches.ehcache.EhcacheCache'.  Cause: java.lang.ClassNotFoundException: Cannot find class: org.mybatis.caches.ehcache.EhcacheCache
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:522) ~[mybatis-spring-1.3.0.jar:1.3.0]
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:381) ~[mybatis-spring-1.3.0.jar:1.3.0]
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:546) ~[mybatis-spring-1.3.0.jar:1.3.0]
+	at cn.mrdear.conf.MybatisConfig.sqlSessionFactoryBean(MybatisConfig.java:69) ~[classes/:na]
+	... 54 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'org.mybatis.caches.ehcache.EhcacheCache'.  Cause: java.lang.ClassNotFoundException: Cannot find class: org.mybatis.caches.ehcache.EhcacheCache
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:92) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:520) ~[mybatis-spring-1.3.0.jar:1.3.0]
+	... 57 common frames omitted
+Caused by: org.apache.ibatis.type.TypeException: Could not resolve type alias 'org.mybatis.caches.ehcache.EhcacheCache'.  Cause: java.lang.ClassNotFoundException: Cannot find class: org.mybatis.caches.ehcache.EhcacheCache
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:120) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.cacheElement(XMLMapperBuilder.java:202) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:114) ~[mybatis-3.4.0.jar:3.4.0]
+	... 59 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Cannot find class: org.mybatis.caches.ehcache.EhcacheCache
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:200) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.io.ClassLoaderWrapper.classForName(ClassLoaderWrapper.java:89) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.io.Resources.classForName(Resources.java:261) ~[mybatis-3.4.0.jar:3.4.0]
+	at org.apache.ibatis.type.TypeAliasRegistry.resolveAlias(TypeAliasRegistry.java:116) ~[mybatis-3.4.0.jar:3.4.0]
+	... 61 common frames omitted
+
+2016-08-13 23:58:10.694  INFO 672 --- [main] cn.mrdear.Application                    : Starting Application on DESKTOP-KAR3OG3 with PID 672 (F:\Git\SpringBoot\target\classes started by 牛李 in F:\Git\SpringBoot)
+2016-08-13 23:58:10.698 DEBUG 672 --- [main] cn.mrdear.Application                    : Running with Spring Boot v1.4.0.RELEASE, Spring v4.3.2.RELEASE
+2016-08-13 23:58:10.699  INFO 672 --- [main] cn.mrdear.Application                    : No active profile set, falling back to default profiles: default
+2016-08-13 23:58:11.020  INFO 672 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5f9edf14: startup date [Sat Aug 13 23:58:11 CST 2016]; root of context hierarchy
+2016-08-13 23:58:12.005  INFO 672 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSourcesConfig' of type [class cn.mrdear.conf.DataSourcesConfig$$EnhancerBySpringCGLIB$$786c6205] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:58:12.363  INFO 672 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2016-08-13 23:58:12.404  INFO 672 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [class com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:58:12.409  INFO 672 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$b29b9a6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:58:12.551  INFO 672 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:58:12.555  INFO 672 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSourceInitializer' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:58:12.558  INFO 672 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatisConfig' of type [class cn.mrdear.conf.MybatisConfig$$EnhancerBySpringCGLIB$$7896680a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:58:12.574  INFO 672 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'transactionManager' of type [class org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:58:12.575  INFO 672 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$29361646] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-13 23:58:13.001  INFO 672 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-08-13 23:58:13.012  INFO 672 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-08-13 23:58:13.013  INFO 672 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-13 23:58:13.107  INFO 672 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-08-13 23:58:13.107  INFO 672 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2091 ms
+2016-08-13 23:58:13.289  INFO 672 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2016-08-13 23:58:13.291  INFO 672 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-13 23:58:13.296  INFO 672 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-13 23:58:13.297  INFO 672 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-13 23:58:13.297  INFO 672 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-13 23:58:13.297  INFO 672 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-13 23:58:13.297  INFO 672 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2016-08-13 23:58:13.298  INFO 672 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'gzipFilter' to urls: [*.js, *.css, *.json, *.html]
+2016-08-13 23:58:13.298  INFO 672 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'simplePageCachingFilter' to urls: [/hello]
+2016-08-13 23:58:13.324 DEBUG 672 --- [localhost-startStop-1] n.s.e.constructs.web.filter.Filter       : Suppression of stack traces enabled for net.sf.ehcache.constructs.web.filter.SimplePageCachingFilter
+2016-08-13 23:58:13.324 DEBUG 672 --- [localhost-startStop-1] n.s.e.c.w.f.SimplePageCachingFilter      : Using configured cacheName of hello.
+2016-08-13 23:58:13.348 DEBUG 672 --- [localhost-startStop-1] n.s.ehcache.config.ConfigurationFactory  : Configuring ehcache from ehcache.xml found in the classpath: file:/F:/Git/SpringBoot/target/classes/ehcache.xml
+2016-08-13 23:58:13.348 DEBUG 672 --- [localhost-startStop-1] n.s.ehcache.config.ConfigurationFactory  : Configuring ehcache from URL: file:/F:/Git/SpringBoot/target/classes/ehcache.xml
+2016-08-13 23:58:13.348 DEBUG 672 --- [localhost-startStop-1] n.s.ehcache.config.ConfigurationFactory  : Configuring ehcache from InputStream
+2016-08-13 23:58:13.363 DEBUG 672 --- [localhost-startStop-1] net.sf.ehcache.config.BeanHandler        : Ignoring ehcache attribute xmlns:xsi
+2016-08-13 23:58:13.363 DEBUG 672 --- [localhost-startStop-1] net.sf.ehcache.config.BeanHandler        : Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+2016-08-13 23:58:13.365 DEBUG 672 --- [localhost-startStop-1] n.s.e.config.DiskStoreConfiguration      : Disk Store Path: E:\test
+2016-08-13 23:58:13.380 DEBUG 672 --- [localhost-startStop-1] net.sf.ehcache.CacheManager              : Creating new CacheManager with default config
+2016-08-13 23:58:13.385 DEBUG 672 --- [localhost-startStop-1] net.sf.ehcache.util.PropertyUtil         : propertiesString is null.
+2016-08-13 23:58:13.395 DEBUG 672 --- [localhost-startStop-1] n.sf.ehcache.config.ConfigurationHelper  : No CacheManagerEventListenerFactory class specified. Skipping...
+2016-08-13 23:58:13.406 DEBUG 672 --- [localhost-startStop-1] net.sf.ehcache.Cache                     : No BootstrapCacheLoaderFactory class specified. Skipping...
+2016-08-13 23:58:13.406 DEBUG 672 --- [localhost-startStop-1] net.sf.ehcache.Cache                     : CacheWriter factory not configured. Skipping...
+2016-08-13 23:58:13.407 DEBUG 672 --- [localhost-startStop-1] n.sf.ehcache.config.ConfigurationHelper  : No CacheExceptionHandlerFactory class specified. Skipping...
+2016-08-13 23:58:13.412 DEBUG 672 --- [localhost-startStop-1] net.sf.ehcache.Cache                     : No BootstrapCacheLoaderFactory class specified. Skipping...
+2016-08-13 23:58:13.412 DEBUG 672 --- [localhost-startStop-1] net.sf.ehcache.Cache                     : CacheWriter factory not configured. Skipping...
+2016-08-13 23:58:13.412 DEBUG 672 --- [localhost-startStop-1] n.sf.ehcache.config.ConfigurationHelper  : No CacheExceptionHandlerFactory class specified. Skipping...
+2016-08-13 23:58:13.519 DEBUG 672 --- [localhost-startStop-1] net.sf.ehcache.store.MemoryStore         : Initialized net.sf.ehcache.store.MemoryStore for hello
+2016-08-13 23:58:13.527 DEBUG 672 --- [localhost-startStop-1] net.sf.ehcache.DiskStorePathManager      : Using diskstore path E:\test
+2016-08-13 23:58:13.528 DEBUG 672 --- [localhost-startStop-1] net.sf.ehcache.DiskStorePathManager      : Holding exclusive lock on E:\test\.ehcache-diskstore.lock
+2016-08-13 23:58:13.529 DEBUG 672 --- [localhost-startStop-1] n.s.e.store.disk.DiskStorageFactory      : Failed to delete file hello.index
+2016-08-13 23:58:13.535 DEBUG 672 --- [localhost-startStop-1] n.s.e.store.disk.DiskStorageFactory      : Matching data file missing (or empty) for index file. Deleting index file E:\test\hello.index
+2016-08-13 23:58:13.536 DEBUG 672 --- [localhost-startStop-1] n.s.e.store.disk.DiskStorageFactory      : Failed to delete file hello.index
+2016-08-13 23:58:13.542 DEBUG 672 --- [localhost-startStop-1] net.sf.ehcache.Cache                     : Initialised cache: hello
+2016-08-13 23:58:13.543 DEBUG 672 --- [localhost-startStop-1] n.sf.ehcache.config.ConfigurationHelper  : CacheDecoratorFactory not configured. Skipping for 'hello'.
+2016-08-13 23:58:13.543 DEBUG 672 --- [localhost-startStop-1] n.sf.ehcache.config.ConfigurationHelper  : CacheDecoratorFactory not configured for defaultCache. Skipping for 'hello'.
+2016-08-13 23:58:13.547 DEBUG 672 --- [localhost-startStop-1] net.sf.ehcache.CacheManager              : Attempting to create an existing singleton. Existing singleton returned.
+2016-08-13 23:58:13.547 DEBUG 672 --- [localhost-startStop-1] net.sf.ehcache.CacheManager              : Attempting to create an existing singleton. Existing singleton returned.
+2016-08-13 23:58:13.548 DEBUG 672 --- [localhost-startStop-1] n.s.e.constructs.web.filter.Filter       : Suppression of stack traces enabled for net.sf.ehcache.constructs.web.filter.GzipFilter
+2016-08-13 23:58:13.705 DEBUG 672 --- [main] net.sf.ehcache.CacheManager              : Attempting to create an existing singleton. Existing singleton returned.
+2016-08-13 23:58:13.707 DEBUG 672 --- [main] net.sf.ehcache.store.MemoryStore         : Initialized net.sf.ehcache.store.MemoryStore for cn.mrdear.mapper.UserMapper
+2016-08-13 23:58:13.708 DEBUG 672 --- [main] n.s.e.store.disk.DiskStorageFactory      : Failed to delete file cn%002emrdear%002emapper%002e%0055ser%004dapper.data
+2016-08-13 23:58:13.708 DEBUG 672 --- [main] n.s.e.store.disk.DiskStorageFactory      : Failed to delete file cn%002emrdear%002emapper%002e%0055ser%004dapper.index
+2016-08-13 23:58:13.708 DEBUG 672 --- [main] n.s.e.store.disk.DiskStorageFactory      : Matching data file missing (or empty) for index file. Deleting index file E:\test\cn%002emrdear%002emapper%002e%0055ser%004dapper.index
+2016-08-13 23:58:13.708 DEBUG 672 --- [main] n.s.e.store.disk.DiskStorageFactory      : Failed to delete file cn%002emrdear%002emapper%002e%0055ser%004dapper.index
+2016-08-13 23:58:13.709 DEBUG 672 --- [main] net.sf.ehcache.Cache                     : Initialised cache: cn.mrdear.mapper.UserMapper
+2016-08-13 23:58:13.709 DEBUG 672 --- [main] n.sf.ehcache.config.ConfigurationHelper  : CacheDecoratorFactory not configured for defaultCache. Skipping for 'cn.mrdear.mapper.UserMapper'.
+2016-08-13 23:58:14.141  INFO 672 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5f9edf14: startup date [Sat Aug 13 23:58:11 CST 2016]; root of context hierarchy
+2016-08-13 23:58:14.215  INFO 672 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello],methods=[GET]}" onto public java.lang.String cn.mrdear.controller.HelloController.hello(org.springframework.ui.Model)
+2016-08-13 23:58:14.216  INFO 672 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public cn.mrdear.entity.User cn.mrdear.controller.HelloController.testUserDao()
+2016-08-13 23:58:14.218  INFO 672 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-13 23:58:14.219  INFO 672 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-13 23:58:14.250  INFO 672 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-13 23:58:14.250  INFO 672 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-13 23:58:14.305  INFO 672 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-13 23:58:15.041  INFO 672 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-08-13 23:58:15.042  INFO 672 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2016-08-13 23:58:15.046  INFO 672 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2016-08-13 23:58:15.107  INFO 672 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-08-13 23:58:15.112  INFO 672 --- [main] cn.mrdear.Application                    : Started Application in 4.93 seconds (JVM running for 5.343)
+2016-08-14 00:00:26.131  INFO 672 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-14 00:00:26.131  INFO 672 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-14 00:00:26.149  INFO 672 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+2016-08-14 00:00:26.162 DEBUG 672 --- [http-nio-8080-exec-1] n.s.e.constructs.web.filter.Filter       : Request Headers: host -> localhost:8080: connection -> keep-alive: pragma -> no-cache: cache-control -> no-cache: accept -> text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8: upgrade-insecure-requests -> 1: user-agent -> Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36: accept-encoding -> gzip, deflate, sdch: accept-language -> zh-CN,zh;q=0.8: cookie -> Webstorm-bdec8ca4=bd82f0a9-5bfd-4056-b3ee-8af520081774; adminUsername=admin
+2016-08-14 00:00:26.163 DEBUG 672 --- [http-nio-8080-exec-1] n.s.e.c.web.filter.CachingFilter         : Thread http-nio-8080-exec-1  has been marked as visited.
+2016-08-14 00:00:26.410 DEBUG 672 --- [http-nio-8080-exec-1] n.s.e.c.web.filter.CachingFilter         : PageInfo ok. Adding to cache hello with key GET/hellonull
+2016-08-14 00:00:26.411 DEBUG 672 --- [http-nio-8080-exec-1] net.sf.ehcache.store.disk.Segment        : put added 0 on heap
+2016-08-14 00:00:26.413 DEBUG 672 --- [http-nio-8080-exec-1] n.s.e.constructs.web.filter.Filter       : Request Headers: host -> localhost:8080: connection -> keep-alive: pragma -> no-cache: cache-control -> no-cache: accept -> text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8: upgrade-insecure-requests -> 1: user-agent -> Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36: accept-encoding -> gzip, deflate, sdch: accept-language -> zh-CN,zh;q=0.8: cookie -> Webstorm-bdec8ca4=bd82f0a9-5bfd-4056-b3ee-8af520081774; adminUsername=admin
+2016-08-14 00:00:26.414 DEBUG 672 --- [http-nio-8080-exec-1] n.s.e.constructs.web.filter.Filter       : Request Headers: host -> localhost:8080: connection -> keep-alive: pragma -> no-cache: cache-control -> no-cache: accept -> text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8: upgrade-insecure-requests -> 1: user-agent -> Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36: accept-encoding -> gzip, deflate, sdch: accept-language -> zh-CN,zh;q=0.8: cookie -> Webstorm-bdec8ca4=bd82f0a9-5bfd-4056-b3ee-8af520081774; adminUsername=admin
+2016-08-14 00:00:26.423 DEBUG 672 --- [hello.data] net.sf.ehcache.store.disk.Segment        : fault removed 0 from heap
+2016-08-14 00:00:26.424 DEBUG 672 --- [hello.data] net.sf.ehcache.store.disk.Segment        : fault added 0 on disk
+2016-08-14 00:00:37.522 DEBUG 672 --- [http-nio-8080-exec-3] n.s.e.constructs.web.filter.Filter       : Request Headers: host -> localhost:8080: connection -> keep-alive: pragma -> no-cache: cache-control -> no-cache: accept -> text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8: upgrade-insecure-requests -> 1: user-agent -> Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36: accept-encoding -> gzip, deflate, sdch: accept-language -> zh-CN,zh;q=0.8: cookie -> Webstorm-bdec8ca4=bd82f0a9-5bfd-4056-b3ee-8af520081774; adminUsername=admin
+2016-08-14 00:00:37.523 DEBUG 672 --- [http-nio-8080-exec-3] n.s.e.c.web.filter.CachingFilter         : Thread http-nio-8080-exec-3  has been marked as visited.
+2016-08-14 00:00:37.524 DEBUG 672 --- [http-nio-8080-exec-3] n.s.e.constructs.web.filter.Filter       : Request Headers: host -> localhost:8080: connection -> keep-alive: pragma -> no-cache: cache-control -> no-cache: accept -> text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8: upgrade-insecure-requests -> 1: user-agent -> Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36: accept-encoding -> gzip, deflate, sdch: accept-language -> zh-CN,zh;q=0.8: cookie -> Webstorm-bdec8ca4=bd82f0a9-5bfd-4056-b3ee-8af520081774; adminUsername=admin
+2016-08-14 00:00:37.524 DEBUG 672 --- [http-nio-8080-exec-3] n.s.e.constructs.web.filter.Filter       : Request Headers: host -> localhost:8080: connection -> keep-alive: pragma -> no-cache: cache-control -> no-cache: accept -> text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8: upgrade-insecure-requests -> 1: user-agent -> Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36: accept-encoding -> gzip, deflate, sdch: accept-language -> zh-CN,zh;q=0.8: cookie -> Webstorm-bdec8ca4=bd82f0a9-5bfd-4056-b3ee-8af520081774; adminUsername=admin
+2016-08-14 00:00:38.373 DEBUG 672 --- [http-nio-8080-exec-5] n.s.e.constructs.web.filter.Filter       : Request Headers: host -> localhost:8080: connection -> keep-alive: pragma -> no-cache: cache-control -> no-cache: accept -> text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8: upgrade-insecure-requests -> 1: user-agent -> Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36: accept-encoding -> gzip, deflate, sdch: accept-language -> zh-CN,zh;q=0.8: cookie -> Webstorm-bdec8ca4=bd82f0a9-5bfd-4056-b3ee-8af520081774; adminUsername=admin
+2016-08-14 00:00:38.373 DEBUG 672 --- [http-nio-8080-exec-5] n.s.e.c.web.filter.CachingFilter         : Thread http-nio-8080-exec-5  has been marked as visited.
+2016-08-14 00:00:38.373 DEBUG 672 --- [http-nio-8080-exec-5] n.s.e.constructs.web.filter.Filter       : Request Headers: host -> localhost:8080: connection -> keep-alive: pragma -> no-cache: cache-control -> no-cache: accept -> text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8: upgrade-insecure-requests -> 1: user-agent -> Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36: accept-encoding -> gzip, deflate, sdch: accept-language -> zh-CN,zh;q=0.8: cookie -> Webstorm-bdec8ca4=bd82f0a9-5bfd-4056-b3ee-8af520081774; adminUsername=admin
+2016-08-14 00:00:38.374 DEBUG 672 --- [http-nio-8080-exec-5] n.s.e.constructs.web.filter.Filter       : Request Headers: host -> localhost:8080: connection -> keep-alive: pragma -> no-cache: cache-control -> no-cache: accept -> text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8: upgrade-insecure-requests -> 1: user-agent -> Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36: accept-encoding -> gzip, deflate, sdch: accept-language -> zh-CN,zh;q=0.8: cookie -> Webstorm-bdec8ca4=bd82f0a9-5bfd-4056-b3ee-8af520081774; adminUsername=admin
+2016-08-14 00:00:39.059 DEBUG 672 --- [http-nio-8080-exec-7] n.s.e.constructs.web.filter.Filter       : Request Headers: host -> localhost:8080: connection -> keep-alive: pragma -> no-cache: cache-control -> no-cache: accept -> text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8: upgrade-insecure-requests -> 1: user-agent -> Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36: accept-encoding -> gzip, deflate, sdch: accept-language -> zh-CN,zh;q=0.8: cookie -> Webstorm-bdec8ca4=bd82f0a9-5bfd-4056-b3ee-8af520081774; adminUsername=admin
+2016-08-14 00:00:39.060 DEBUG 672 --- [http-nio-8080-exec-7] n.s.e.c.web.filter.CachingFilter         : Thread http-nio-8080-exec-7  has been marked as visited.
+2016-08-14 00:00:39.060 DEBUG 672 --- [http-nio-8080-exec-7] n.s.e.constructs.web.filter.Filter       : Request Headers: host -> localhost:8080: connection -> keep-alive: pragma -> no-cache: cache-control -> no-cache: accept -> text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8: upgrade-insecure-requests -> 1: user-agent -> Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36: accept-encoding -> gzip, deflate, sdch: accept-language -> zh-CN,zh;q=0.8: cookie -> Webstorm-bdec8ca4=bd82f0a9-5bfd-4056-b3ee-8af520081774; adminUsername=admin
+2016-08-14 00:00:39.060 DEBUG 672 --- [http-nio-8080-exec-7] n.s.e.constructs.web.filter.Filter       : Request Headers: host -> localhost:8080: connection -> keep-alive: pragma -> no-cache: cache-control -> no-cache: accept -> text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8: upgrade-insecure-requests -> 1: user-agent -> Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36: accept-encoding -> gzip, deflate, sdch: accept-language -> zh-CN,zh;q=0.8: cookie -> Webstorm-bdec8ca4=bd82f0a9-5bfd-4056-b3ee-8af520081774; adminUsername=admin
+2016-08-14 00:00:47.017 DEBUG 672 --- [http-nio-8080-exec-9] cn.mrdear.mapper.UserMapper              : Cache Hit Ratio [cn.mrdear.mapper.UserMapper]: 0.0
+2016-08-14 00:00:47.053 DEBUG 672 --- [http-nio-8080-exec-9] cn.mrdear.mapper.UserMapper.findById     : ==>  Preparing: SELECT * FROM user WHERE id=? 
+2016-08-14 00:00:47.194 DEBUG 672 --- [http-nio-8080-exec-9] cn.mrdear.mapper.UserMapper.findById     : ==> Parameters: 1(Integer)
+2016-08-14 00:00:47.228 TRACE 672 --- [http-nio-8080-exec-9] cn.mrdear.mapper.UserMapper.findById     : <==    Columns: id, username, password
+2016-08-14 00:00:47.229 TRACE 672 --- [http-nio-8080-exec-9] cn.mrdear.mapper.UserMapper.findById     : <==        Row: 1, niuli, 123456
+2016-08-14 00:00:47.231 DEBUG 672 --- [http-nio-8080-exec-9] cn.mrdear.mapper.UserMapper.findById     : <==      Total: 1
+2016-08-14 00:00:47.232 DEBUG 672 --- [http-nio-8080-exec-9] net.sf.ehcache.store.disk.Segment        : put added 0 on heap
+2016-08-14 00:00:47.250 DEBUG 672 --- [cn%002emrdear%002emapper%002e%0055ser%004dapper.data] net.sf.ehcache.store.disk.Segment        : fault removed 0 from heap
+2016-08-14 00:00:47.250 DEBUG 672 --- [cn%002emrdear%002emapper%002e%0055ser%004dapper.data] net.sf.ehcache.store.disk.Segment        : fault added 0 on disk
+2016-08-14 00:01:40.854 DEBUG 672 --- [http-nio-8080-exec-4] cn.mrdear.mapper.UserMapper              : Cache Hit Ratio [cn.mrdear.mapper.UserMapper]: 0.5
+2016-08-14 00:01:41.499 DEBUG 672 --- [http-nio-8080-exec-6] cn.mrdear.mapper.UserMapper              : Cache Hit Ratio [cn.mrdear.mapper.UserMapper]: 0.6666666666666666
+2016-08-14 00:02:01.640 DEBUG 672 --- [http-nio-8080-exec-8] cn.mrdear.mapper.UserMapper              : Cache Hit Ratio [cn.mrdear.mapper.UserMapper]: 0.75
+2016-08-14 00:02:34.483  INFO 9244 --- [main] cn.mrdear.Application                    : Starting Application on DESKTOP-KAR3OG3 with PID 9244 (F:\Git\SpringBoot\target\classes started by 牛李 in F:\Git\SpringBoot)
+2016-08-14 00:02:34.486 DEBUG 9244 --- [main] cn.mrdear.Application                    : Running with Spring Boot v1.4.0.RELEASE, Spring v4.3.2.RELEASE
+2016-08-14 00:02:34.486  INFO 9244 --- [main] cn.mrdear.Application                    : No active profile set, falling back to default profiles: default
+2016-08-14 00:02:34.787  INFO 9244 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5f9edf14: startup date [Sun Aug 14 00:02:34 CST 2016]; root of context hierarchy
+2016-08-14 00:02:35.704  INFO 9244 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSourcesConfig' of type [class cn.mrdear.conf.DataSourcesConfig$$EnhancerBySpringCGLIB$$50b6222e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-14 00:02:36.025  INFO 9244 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2016-08-14 00:02:36.068  INFO 9244 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [class com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-14 00:02:36.075  INFO 9244 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$e37379cf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-14 00:02:36.231  INFO 9244 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-14 00:02:36.236  INFO 9244 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSourceInitializer' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-14 00:02:36.238  INFO 9244 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatisConfig' of type [class cn.mrdear.conf.MybatisConfig$$EnhancerBySpringCGLIB$$50e02833] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-14 00:02:36.255  INFO 9244 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'transactionManager' of type [class org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-14 00:02:36.256  INFO 9244 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$17fd66f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-14 00:02:36.737  INFO 9244 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-08-14 00:02:36.750  INFO 9244 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-08-14 00:02:36.751  INFO 9244 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-14 00:02:36.845  INFO 9244 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-08-14 00:02:36.846  INFO 9244 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2063 ms
+2016-08-14 00:02:37.010  INFO 9244 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2016-08-14 00:02:37.011  INFO 9244 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-14 00:02:37.015  INFO 9244 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-14 00:02:37.015  INFO 9244 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-14 00:02:37.016  INFO 9244 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-14 00:02:37.016  INFO 9244 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-14 00:02:37.016  INFO 9244 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2016-08-14 00:02:37.016  INFO 9244 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'gzipFilter' to urls: [*.js, *.css, *.json, *.html]
+2016-08-14 00:02:37.016  INFO 9244 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'simplePageCachingFilter' to urls: [/hello]
+2016-08-14 00:02:37.065 DEBUG 9244 --- [localhost-startStop-1] n.s.e.constructs.web.filter.Filter       : Suppression of stack traces enabled for net.sf.ehcache.constructs.web.filter.SimplePageCachingFilter
+2016-08-14 00:02:37.066 DEBUG 9244 --- [localhost-startStop-1] n.s.e.c.w.f.SimplePageCachingFilter      : Using configured cacheName of hello.
+2016-08-14 00:02:37.076 DEBUG 9244 --- [localhost-startStop-1] n.s.ehcache.config.ConfigurationFactory  : Configuring ehcache from ehcache.xml found in the classpath: file:/F:/Git/SpringBoot/target/classes/ehcache.xml
+2016-08-14 00:02:37.076 DEBUG 9244 --- [localhost-startStop-1] n.s.ehcache.config.ConfigurationFactory  : Configuring ehcache from URL: file:/F:/Git/SpringBoot/target/classes/ehcache.xml
+2016-08-14 00:02:37.076 DEBUG 9244 --- [localhost-startStop-1] n.s.ehcache.config.ConfigurationFactory  : Configuring ehcache from InputStream
+2016-08-14 00:02:37.089 DEBUG 9244 --- [localhost-startStop-1] net.sf.ehcache.config.BeanHandler        : Ignoring ehcache attribute xmlns:xsi
+2016-08-14 00:02:37.089 DEBUG 9244 --- [localhost-startStop-1] net.sf.ehcache.config.BeanHandler        : Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+2016-08-14 00:02:37.090 DEBUG 9244 --- [localhost-startStop-1] n.s.e.config.DiskStoreConfiguration      : Disk Store Path: E:\test
+2016-08-14 00:02:37.101 DEBUG 9244 --- [localhost-startStop-1] net.sf.ehcache.CacheManager              : Creating new CacheManager with default config
+2016-08-14 00:02:37.106 DEBUG 9244 --- [localhost-startStop-1] net.sf.ehcache.util.PropertyUtil         : propertiesString is null.
+2016-08-14 00:02:37.116 DEBUG 9244 --- [localhost-startStop-1] n.sf.ehcache.config.ConfigurationHelper  : No CacheManagerEventListenerFactory class specified. Skipping...
+2016-08-14 00:02:37.129 DEBUG 9244 --- [localhost-startStop-1] net.sf.ehcache.Cache                     : No BootstrapCacheLoaderFactory class specified. Skipping...
+2016-08-14 00:02:37.129 DEBUG 9244 --- [localhost-startStop-1] net.sf.ehcache.Cache                     : CacheWriter factory not configured. Skipping...
+2016-08-14 00:02:37.130 DEBUG 9244 --- [localhost-startStop-1] n.sf.ehcache.config.ConfigurationHelper  : No CacheExceptionHandlerFactory class specified. Skipping...
+2016-08-14 00:02:37.135 DEBUG 9244 --- [localhost-startStop-1] net.sf.ehcache.Cache                     : No BootstrapCacheLoaderFactory class specified. Skipping...
+2016-08-14 00:02:37.135 DEBUG 9244 --- [localhost-startStop-1] net.sf.ehcache.Cache                     : CacheWriter factory not configured. Skipping...
+2016-08-14 00:02:37.135 DEBUG 9244 --- [localhost-startStop-1] n.sf.ehcache.config.ConfigurationHelper  : No CacheExceptionHandlerFactory class specified. Skipping...
+2016-08-14 00:02:37.233 DEBUG 9244 --- [localhost-startStop-1] net.sf.ehcache.store.MemoryStore         : Initialized net.sf.ehcache.store.MemoryStore for hello
+2016-08-14 00:02:37.239 DEBUG 9244 --- [localhost-startStop-1] net.sf.ehcache.DiskStorePathManager      : Using diskstore path E:\test
+2016-08-14 00:02:37.240 DEBUG 9244 --- [localhost-startStop-1] net.sf.ehcache.DiskStorePathManager      : Holding exclusive lock on E:\test\.ehcache-diskstore.lock
+2016-08-14 00:02:37.240 DEBUG 9244 --- [localhost-startStop-1] n.s.e.store.disk.DiskStorageFactory      : Failed to delete file hello.index
+2016-08-14 00:02:37.246 DEBUG 9244 --- [localhost-startStop-1] n.s.e.store.disk.DiskStorageFactory      : Matching data file missing (or empty) for index file. Deleting index file E:\test\hello.index
+2016-08-14 00:02:37.247 DEBUG 9244 --- [localhost-startStop-1] n.s.e.store.disk.DiskStorageFactory      : Failed to delete file hello.index
+2016-08-14 00:02:37.253 DEBUG 9244 --- [localhost-startStop-1] net.sf.ehcache.Cache                     : Initialised cache: hello
+2016-08-14 00:02:37.253 DEBUG 9244 --- [localhost-startStop-1] n.sf.ehcache.config.ConfigurationHelper  : CacheDecoratorFactory not configured. Skipping for 'hello'.
+2016-08-14 00:02:37.253 DEBUG 9244 --- [localhost-startStop-1] n.sf.ehcache.config.ConfigurationHelper  : CacheDecoratorFactory not configured for defaultCache. Skipping for 'hello'.
+2016-08-14 00:02:37.256 DEBUG 9244 --- [localhost-startStop-1] net.sf.ehcache.CacheManager              : Attempting to create an existing singleton. Existing singleton returned.
+2016-08-14 00:02:37.256 DEBUG 9244 --- [localhost-startStop-1] net.sf.ehcache.CacheManager              : Attempting to create an existing singleton. Existing singleton returned.
+2016-08-14 00:02:37.257 DEBUG 9244 --- [localhost-startStop-1] n.s.e.constructs.web.filter.Filter       : Suppression of stack traces enabled for net.sf.ehcache.constructs.web.filter.GzipFilter
+2016-08-14 00:02:37.401 DEBUG 9244 --- [main] net.sf.ehcache.CacheManager              : Attempting to create an existing singleton. Existing singleton returned.
+2016-08-14 00:02:37.403 DEBUG 9244 --- [main] net.sf.ehcache.store.MemoryStore         : Initialized net.sf.ehcache.store.MemoryStore for cn.mrdear.mapper.UserMapper
+2016-08-14 00:02:37.405 DEBUG 9244 --- [main] n.s.e.store.disk.DiskStorageFactory      : Failed to delete file cn%002emrdear%002emapper%002e%0055ser%004dapper.index
+2016-08-14 00:02:37.405 DEBUG 9244 --- [main] n.s.e.store.disk.DiskStorageFactory      : Matching data file missing (or empty) for index file. Deleting index file E:\test\cn%002emrdear%002emapper%002e%0055ser%004dapper.index
+2016-08-14 00:02:37.406 DEBUG 9244 --- [main] n.s.e.store.disk.DiskStorageFactory      : Failed to delete file cn%002emrdear%002emapper%002e%0055ser%004dapper.index
+2016-08-14 00:02:37.406 DEBUG 9244 --- [main] net.sf.ehcache.Cache                     : Initialised cache: cn.mrdear.mapper.UserMapper
+2016-08-14 00:02:37.406 DEBUG 9244 --- [main] n.sf.ehcache.config.ConfigurationHelper  : CacheDecoratorFactory not configured for defaultCache. Skipping for 'cn.mrdear.mapper.UserMapper'.
+2016-08-14 00:02:37.768  INFO 9244 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5f9edf14: startup date [Sun Aug 14 00:02:34 CST 2016]; root of context hierarchy
+2016-08-14 00:02:37.842  INFO 9244 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public cn.mrdear.entity.User cn.mrdear.controller.HelloController.testUserDao()
+2016-08-14 00:02:37.843  INFO 9244 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello],methods=[GET]}" onto public java.lang.String cn.mrdear.controller.HelloController.hello(org.springframework.ui.Model)
+2016-08-14 00:02:37.845  INFO 9244 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-14 00:02:37.846  INFO 9244 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-14 00:02:37.884  INFO 9244 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-14 00:02:37.884  INFO 9244 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-14 00:02:37.924  INFO 9244 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-14 00:02:38.598  INFO 9244 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-08-14 00:02:38.599  INFO 9244 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2016-08-14 00:02:38.604  INFO 9244 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2016-08-14 00:02:38.662  INFO 9244 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-08-14 00:02:38.666  INFO 9244 --- [main] cn.mrdear.Application                    : Started Application in 4.685 seconds (JVM running for 5.164)
+2016-08-14 00:02:48.459  INFO 9244 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-14 00:02:48.460  INFO 9244 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-14 00:02:48.478  INFO 9244 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+2016-08-14 00:02:48.527 DEBUG 9244 --- [http-nio-8080-exec-1] cn.mrdear.mapper.UserMapper              : Cache Hit Ratio [cn.mrdear.mapper.UserMapper]: 0.0
+2016-08-14 00:02:48.541 DEBUG 9244 --- [http-nio-8080-exec-1] cn.mrdear.mapper.UserMapper.findById     : ==>  Preparing: SELECT * FROM user WHERE id=? 
+2016-08-14 00:02:48.643 DEBUG 9244 --- [http-nio-8080-exec-1] cn.mrdear.mapper.UserMapper.findById     : ==> Parameters: 1(Integer)
+2016-08-14 00:02:48.659 TRACE 9244 --- [http-nio-8080-exec-1] cn.mrdear.mapper.UserMapper.findById     : <==    Columns: id, username, password
+2016-08-14 00:02:48.660 TRACE 9244 --- [http-nio-8080-exec-1] cn.mrdear.mapper.UserMapper.findById     : <==        Row: 1, niuli, 123456
+2016-08-14 00:02:48.662 DEBUG 9244 --- [http-nio-8080-exec-1] cn.mrdear.mapper.UserMapper.findById     : <==      Total: 1
+2016-08-14 00:02:48.663 DEBUG 9244 --- [http-nio-8080-exec-1] net.sf.ehcache.store.disk.Segment        : put added 0 on heap
+2016-08-14 00:02:48.712 DEBUG 9244 --- [cn%002emrdear%002emapper%002e%0055ser%004dapper.data] net.sf.ehcache.store.disk.Segment        : fault removed 0 from heap
+2016-08-14 00:02:48.713 DEBUG 9244 --- [cn%002emrdear%002emapper%002e%0055ser%004dapper.data] net.sf.ehcache.store.disk.Segment        : fault added 0 on disk
+2016-08-14 00:03:34.409 DEBUG 9244 --- [http-nio-8080-exec-3] cn.mrdear.mapper.UserMapper              : Cache Hit Ratio [cn.mrdear.mapper.UserMapper]: 0.5
+2016-08-14 00:03:45.283 DEBUG 9244 --- [http-nio-8080-exec-5] n.s.e.constructs.web.filter.Filter       : Request Headers: host -> localhost:8080: connection -> keep-alive: pragma -> no-cache: cache-control -> no-cache: accept -> text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8: upgrade-insecure-requests -> 1: user-agent -> Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36: accept-encoding -> gzip, deflate, sdch: accept-language -> zh-CN,zh;q=0.8: cookie -> Webstorm-bdec8ca4=bd82f0a9-5bfd-4056-b3ee-8af520081774; adminUsername=admin
+2016-08-14 00:03:45.284 DEBUG 9244 --- [http-nio-8080-exec-5] n.s.e.c.web.filter.CachingFilter         : Thread http-nio-8080-exec-5  has been marked as visited.
+2016-08-14 00:03:45.489 DEBUG 9244 --- [http-nio-8080-exec-5] n.s.e.c.web.filter.CachingFilter         : PageInfo ok. Adding to cache hello with key GET/hellonull
+2016-08-14 00:03:45.489 DEBUG 9244 --- [http-nio-8080-exec-5] net.sf.ehcache.store.disk.Segment        : put added 0 on heap
+2016-08-14 00:03:45.490 DEBUG 9244 --- [http-nio-8080-exec-5] n.s.e.constructs.web.filter.Filter       : Request Headers: host -> localhost:8080: connection -> keep-alive: pragma -> no-cache: cache-control -> no-cache: accept -> text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8: upgrade-insecure-requests -> 1: user-agent -> Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36: accept-encoding -> gzip, deflate, sdch: accept-language -> zh-CN,zh;q=0.8: cookie -> Webstorm-bdec8ca4=bd82f0a9-5bfd-4056-b3ee-8af520081774; adminUsername=admin
+2016-08-14 00:03:45.492 DEBUG 9244 --- [http-nio-8080-exec-5] n.s.e.constructs.web.filter.Filter       : Request Headers: host -> localhost:8080: connection -> keep-alive: pragma -> no-cache: cache-control -> no-cache: accept -> text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8: upgrade-insecure-requests -> 1: user-agent -> Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36: accept-encoding -> gzip, deflate, sdch: accept-language -> zh-CN,zh;q=0.8: cookie -> Webstorm-bdec8ca4=bd82f0a9-5bfd-4056-b3ee-8af520081774; adminUsername=admin
+2016-08-14 00:03:45.494 DEBUG 9244 --- [hello.data] net.sf.ehcache.store.disk.Segment        : fault removed 0 from heap
+2016-08-14 00:03:45.495 DEBUG 9244 --- [hello.data] net.sf.ehcache.store.disk.Segment        : fault added 0 on disk
+2016-08-14 00:04:00.884 DEBUG 9244 --- [http-nio-8080-exec-7] n.s.e.constructs.web.filter.Filter       : Request Headers: host -> localhost:8080: connection -> keep-alive: pragma -> no-cache: cache-control -> no-cache: accept -> text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8: upgrade-insecure-requests -> 1: user-agent -> Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36: accept-encoding -> gzip, deflate, sdch: accept-language -> zh-CN,zh;q=0.8: cookie -> Webstorm-bdec8ca4=bd82f0a9-5bfd-4056-b3ee-8af520081774; adminUsername=admin
+2016-08-14 00:04:00.884 DEBUG 9244 --- [http-nio-8080-exec-7] n.s.e.c.web.filter.CachingFilter         : Thread http-nio-8080-exec-7  has been marked as visited.
+2016-08-14 00:04:00.884 DEBUG 9244 --- [http-nio-8080-exec-7] n.s.e.constructs.web.filter.Filter       : Request Headers: host -> localhost:8080: connection -> keep-alive: pragma -> no-cache: cache-control -> no-cache: accept -> text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8: upgrade-insecure-requests -> 1: user-agent -> Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36: accept-encoding -> gzip, deflate, sdch: accept-language -> zh-CN,zh;q=0.8: cookie -> Webstorm-bdec8ca4=bd82f0a9-5bfd-4056-b3ee-8af520081774; adminUsername=admin
+2016-08-14 00:04:00.884 DEBUG 9244 --- [http-nio-8080-exec-7] n.s.e.constructs.web.filter.Filter       : Request Headers: host -> localhost:8080: connection -> keep-alive: pragma -> no-cache: cache-control -> no-cache: accept -> text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8: upgrade-insecure-requests -> 1: user-agent -> Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36: accept-encoding -> gzip, deflate, sdch: accept-language -> zh-CN,zh;q=0.8: cookie -> Webstorm-bdec8ca4=bd82f0a9-5bfd-4056-b3ee-8af520081774; adminUsername=admin
+2016-08-14 00:04:46.629  INFO 5340 --- [main] cn.mrdear.Application                    : Starting Application on DESKTOP-KAR3OG3 with PID 5340 (F:\Git\SpringBoot\target\classes started by 牛李 in F:\Git\SpringBoot)
+2016-08-14 00:04:46.633 DEBUG 5340 --- [main] cn.mrdear.Application                    : Running with Spring Boot v1.4.0.RELEASE, Spring v4.3.2.RELEASE
+2016-08-14 00:04:46.633  INFO 5340 --- [main] cn.mrdear.Application                    : No active profile set, falling back to default profiles: default
+2016-08-14 00:04:47.020  INFO 5340 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5f9edf14: startup date [Sun Aug 14 00:04:47 CST 2016]; root of context hierarchy
+2016-08-14 00:04:47.981  INFO 5340 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSourcesConfig' of type [class cn.mrdear.conf.DataSourcesConfig$$EnhancerBySpringCGLIB$$9046f33d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-14 00:04:48.299  INFO 5340 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2016-08-14 00:04:48.343  INFO 5340 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [class com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-14 00:04:48.349  INFO 5340 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$23044ade] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-14 00:04:48.492  INFO 5340 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-14 00:04:48.496  INFO 5340 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSourceInitializer' of type [class org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-14 00:04:48.498  INFO 5340 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatisConfig' of type [class cn.mrdear.conf.MybatisConfig$$EnhancerBySpringCGLIB$$9070f942] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-14 00:04:48.511  INFO 5340 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'transactionManager' of type [class org.springframework.jdbc.datasource.DataSourceTransactionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-14 00:04:48.512  INFO 5340 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4110a77e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-08-14 00:04:48.920  INFO 5340 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-08-14 00:04:48.933  INFO 5340 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-08-14 00:04:48.935  INFO 5340 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.4
+2016-08-14 00:04:49.020  INFO 5340 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-08-14 00:04:49.020  INFO 5340 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2004 ms
+2016-08-14 00:04:49.193  INFO 5340 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'statViewServlet' to [/druid/*]
+2016-08-14 00:04:49.194  INFO 5340 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2016-08-14 00:04:49.199  INFO 5340 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-08-14 00:04:49.200  INFO 5340 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-08-14 00:04:49.200  INFO 5340 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-08-14 00:04:49.200  INFO 5340 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2016-08-14 00:04:49.201  INFO 5340 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webStatFilter' to urls: [/*]
+2016-08-14 00:04:49.201  INFO 5340 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'gzipFilter' to urls: [*.js, *.css, *.json, *.html]
+2016-08-14 00:04:49.201  INFO 5340 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'simplePageCachingFilter' to urls: [/hello]
+2016-08-14 00:04:49.225 DEBUG 5340 --- [localhost-startStop-1] n.s.e.constructs.web.filter.Filter       : Suppression of stack traces enabled for net.sf.ehcache.constructs.web.filter.SimplePageCachingFilter
+2016-08-14 00:04:49.226 DEBUG 5340 --- [localhost-startStop-1] n.s.e.c.w.f.SimplePageCachingFilter      : Using configured cacheName of hello.
+2016-08-14 00:04:49.251 DEBUG 5340 --- [localhost-startStop-1] n.s.ehcache.config.ConfigurationFactory  : Configuring ehcache from ehcache.xml found in the classpath: file:/F:/Git/SpringBoot/target/classes/ehcache.xml
+2016-08-14 00:04:49.252 DEBUG 5340 --- [localhost-startStop-1] n.s.ehcache.config.ConfigurationFactory  : Configuring ehcache from URL: file:/F:/Git/SpringBoot/target/classes/ehcache.xml
+2016-08-14 00:04:49.252 DEBUG 5340 --- [localhost-startStop-1] n.s.ehcache.config.ConfigurationFactory  : Configuring ehcache from InputStream
+2016-08-14 00:04:49.262 DEBUG 5340 --- [localhost-startStop-1] net.sf.ehcache.config.BeanHandler        : Ignoring ehcache attribute xmlns:xsi
+2016-08-14 00:04:49.262 DEBUG 5340 --- [localhost-startStop-1] net.sf.ehcache.config.BeanHandler        : Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+2016-08-14 00:04:49.263 DEBUG 5340 --- [localhost-startStop-1] n.s.e.config.DiskStoreConfiguration      : Disk Store Path: E:\test
+2016-08-14 00:04:49.275 DEBUG 5340 --- [localhost-startStop-1] net.sf.ehcache.CacheManager              : Creating new CacheManager with default config
+2016-08-14 00:04:49.281 DEBUG 5340 --- [localhost-startStop-1] net.sf.ehcache.util.PropertyUtil         : propertiesString is null.
+2016-08-14 00:04:49.289 DEBUG 5340 --- [localhost-startStop-1] n.sf.ehcache.config.ConfigurationHelper  : No CacheManagerEventListenerFactory class specified. Skipping...
+2016-08-14 00:04:49.299 DEBUG 5340 --- [localhost-startStop-1] net.sf.ehcache.Cache                     : No BootstrapCacheLoaderFactory class specified. Skipping...
+2016-08-14 00:04:49.299 DEBUG 5340 --- [localhost-startStop-1] net.sf.ehcache.Cache                     : CacheWriter factory not configured. Skipping...
+2016-08-14 00:04:49.300 DEBUG 5340 --- [localhost-startStop-1] n.sf.ehcache.config.ConfigurationHelper  : No CacheExceptionHandlerFactory class specified. Skipping...
+2016-08-14 00:04:49.304 DEBUG 5340 --- [localhost-startStop-1] net.sf.ehcache.Cache                     : No BootstrapCacheLoaderFactory class specified. Skipping...
+2016-08-14 00:04:49.304 DEBUG 5340 --- [localhost-startStop-1] net.sf.ehcache.Cache                     : CacheWriter factory not configured. Skipping...
+2016-08-14 00:04:49.304 DEBUG 5340 --- [localhost-startStop-1] n.sf.ehcache.config.ConfigurationHelper  : No CacheExceptionHandlerFactory class specified. Skipping...
+2016-08-14 00:04:49.393 DEBUG 5340 --- [localhost-startStop-1] net.sf.ehcache.store.MemoryStore         : Initialized net.sf.ehcache.store.MemoryStore for hello
+2016-08-14 00:04:49.400 DEBUG 5340 --- [localhost-startStop-1] net.sf.ehcache.DiskStorePathManager      : Using diskstore path E:\test
+2016-08-14 00:04:49.400 DEBUG 5340 --- [localhost-startStop-1] net.sf.ehcache.DiskStorePathManager      : Holding exclusive lock on E:\test\.ehcache-diskstore.lock
+2016-08-14 00:04:49.401 DEBUG 5340 --- [localhost-startStop-1] n.s.e.store.disk.DiskStorageFactory      : Failed to delete file hello.index
+2016-08-14 00:04:49.407 DEBUG 5340 --- [localhost-startStop-1] n.s.e.store.disk.DiskStorageFactory      : Matching data file missing (or empty) for index file. Deleting index file E:\test\hello.index
+2016-08-14 00:04:49.407 DEBUG 5340 --- [localhost-startStop-1] n.s.e.store.disk.DiskStorageFactory      : Failed to delete file hello.index
+2016-08-14 00:04:49.413 DEBUG 5340 --- [localhost-startStop-1] net.sf.ehcache.Cache                     : Initialised cache: hello
+2016-08-14 00:04:49.413 DEBUG 5340 --- [localhost-startStop-1] n.sf.ehcache.config.ConfigurationHelper  : CacheDecoratorFactory not configured. Skipping for 'hello'.
+2016-08-14 00:04:49.413 DEBUG 5340 --- [localhost-startStop-1] n.sf.ehcache.config.ConfigurationHelper  : CacheDecoratorFactory not configured for defaultCache. Skipping for 'hello'.
+2016-08-14 00:04:49.417 DEBUG 5340 --- [localhost-startStop-1] net.sf.ehcache.CacheManager              : Attempting to create an existing singleton. Existing singleton returned.
+2016-08-14 00:04:49.417 DEBUG 5340 --- [localhost-startStop-1] net.sf.ehcache.CacheManager              : Attempting to create an existing singleton. Existing singleton returned.
+2016-08-14 00:04:49.418 DEBUG 5340 --- [localhost-startStop-1] n.s.e.constructs.web.filter.Filter       : Suppression of stack traces enabled for net.sf.ehcache.constructs.web.filter.GzipFilter
+2016-08-14 00:04:49.569 DEBUG 5340 --- [main] net.sf.ehcache.CacheManager              : Attempting to create an existing singleton. Existing singleton returned.
+2016-08-14 00:04:49.571 DEBUG 5340 --- [main] net.sf.ehcache.store.MemoryStore         : Initialized net.sf.ehcache.store.MemoryStore for cn.mrdear.mapper.UserMapper
+2016-08-14 00:04:49.573 DEBUG 5340 --- [main] n.s.e.store.disk.DiskStorageFactory      : Failed to delete file cn%002emrdear%002emapper%002e%0055ser%004dapper.index
+2016-08-14 00:04:49.574 DEBUG 5340 --- [main] n.s.e.store.disk.DiskStorageFactory      : Matching data file missing (or empty) for index file. Deleting index file E:\test\cn%002emrdear%002emapper%002e%0055ser%004dapper.index
+2016-08-14 00:04:49.574 DEBUG 5340 --- [main] n.s.e.store.disk.DiskStorageFactory      : Failed to delete file cn%002emrdear%002emapper%002e%0055ser%004dapper.index
+2016-08-14 00:04:49.575 DEBUG 5340 --- [main] net.sf.ehcache.Cache                     : Initialised cache: cn.mrdear.mapper.UserMapper
+2016-08-14 00:04:49.575 DEBUG 5340 --- [main] n.sf.ehcache.config.ConfigurationHelper  : CacheDecoratorFactory not configured for defaultCache. Skipping for 'cn.mrdear.mapper.UserMapper'.
+2016-08-14 00:04:49.927  INFO 5340 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5f9edf14: startup date [Sun Aug 14 00:04:47 CST 2016]; root of context hierarchy
+2016-08-14 00:04:49.999  INFO 5340 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/hello],methods=[GET]}" onto public java.lang.String cn.mrdear.controller.HelloController.hello(org.springframework.ui.Model)
+2016-08-14 00:04:50.000  INFO 5340 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/users],methods=[GET]}" onto public cn.mrdear.entity.User cn.mrdear.controller.HelloController.testUserDao()
+2016-08-14 00:04:50.003  INFO 5340 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-08-14 00:04:50.003  INFO 5340 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-08-14 00:04:50.044  INFO 5340 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-14 00:04:50.044  INFO 5340 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-14 00:04:50.087  INFO 5340 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-08-14 00:04:50.839  INFO 5340 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-08-14 00:04:50.841  INFO 5340 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2016-08-14 00:04:50.845  INFO 5340 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+2016-08-14 00:04:50.900  INFO 5340 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-08-14 00:04:50.905  INFO 5340 --- [main] cn.mrdear.Application                    : Started Application in 4.814 seconds (JVM running for 5.253)
+2016-08-14 00:04:58.083  INFO 5340 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-08-14 00:04:58.083  INFO 5340 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2016-08-14 00:04:58.102  INFO 5340 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 19 ms
+2016-08-14 00:04:58.157 DEBUG 5340 --- [http-nio-8080-exec-1] cn.mrdear.mapper.UserMapper              : Cache Hit Ratio [cn.mrdear.mapper.UserMapper]: 0.0
+2016-08-14 00:04:58.177 DEBUG 5340 --- [http-nio-8080-exec-1] cn.mrdear.mapper.UserMapper.findById     : ==>  Preparing: SELECT * FROM user WHERE id=? 
+2016-08-14 00:04:58.305 DEBUG 5340 --- [http-nio-8080-exec-1] cn.mrdear.mapper.UserMapper.findById     : ==> Parameters: 1(Integer)
+2016-08-14 00:04:58.324 TRACE 5340 --- [http-nio-8080-exec-1] cn.mrdear.mapper.UserMapper.findById     : <==    Columns: id, username, password
+2016-08-14 00:04:58.324 TRACE 5340 --- [http-nio-8080-exec-1] cn.mrdear.mapper.UserMapper.findById     : <==        Row: 1, niuli, 123456
+2016-08-14 00:04:58.326 DEBUG 5340 --- [http-nio-8080-exec-1] cn.mrdear.mapper.UserMapper.findById     : <==      Total: 1
+2016-08-14 00:04:58.329 DEBUG 5340 --- [http-nio-8080-exec-1] net.sf.ehcache.store.disk.Segment        : put added 0 on heap
+2016-08-14 00:04:58.342 DEBUG 5340 --- [cn%002emrdear%002emapper%002e%0055ser%004dapper.data] net.sf.ehcache.store.disk.Segment        : fault removed 0 from heap
+2016-08-14 00:04:58.342 DEBUG 5340 --- [cn%002emrdear%002emapper%002e%0055ser%004dapper.data] net.sf.ehcache.store.disk.Segment        : fault added 0 on disk
+2016-08-14 00:05:06.901 DEBUG 5340 --- [http-nio-8080-exec-3] cn.mrdear.mapper.UserMapper              : Cache Hit Ratio [cn.mrdear.mapper.UserMapper]: 0.5
+2016-08-14 00:05:10.092 DEBUG 5340 --- [http-nio-8080-exec-7] cn.mrdear.mapper.UserMapper              : Cache Hit Ratio [cn.mrdear.mapper.UserMapper]: 0.6666666666666666
+2016-08-14 00:05:10.589 DEBUG 5340 --- [http-nio-8080-exec-9] cn.mrdear.mapper.UserMapper              : Cache Hit Ratio [cn.mrdear.mapper.UserMapper]: 0.75
+2016-08-14 00:05:10.907 DEBUG 5340 --- [http-nio-8080-exec-1] cn.mrdear.mapper.UserMapper              : Cache Hit Ratio [cn.mrdear.mapper.UserMapper]: 0.8
+2016-08-14 00:05:11.250 DEBUG 5340 --- [http-nio-8080-exec-3] cn.mrdear.mapper.UserMapper              : Cache Hit Ratio [cn.mrdear.mapper.UserMapper]: 0.8333333333333334
+2016-08-14 00:05:11.566 DEBUG 5340 --- [http-nio-8080-exec-5] cn.mrdear.mapper.UserMapper              : Cache Hit Ratio [cn.mrdear.mapper.UserMapper]: 0.8571428571428571

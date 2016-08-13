@@ -1,6 +1,7 @@
 package cn.mrdear.conf;
 
 import com.github.pagehelper.PageHelper;
+
 import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -14,9 +15,10 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.TransactionManagementConfigurer;
 
+import java.util.Properties;
+
 import javax.annotation.Resource;
 import javax.sql.DataSource;
-import java.util.Properties;
 
 /**
  * mybatis配置类
@@ -36,8 +38,7 @@ public class MybatisConfig implements TransactionManagementConfigurer{
 //    @Bean
 //    public org.apache.ibatis.session.Configuration mybatisSetting(){
 //        org.apache.ibatis.session.Configuration configuration = new org.apache.ibatis.session.Configuration();
-//
-//        return null;
+//        return configuration;
 //    }
 
     @Bean(name = "sqlSessionFactory")
