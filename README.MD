@@ -18,5 +18,9 @@
 --------------
 该Demo是做学习Spring-Boot时整合环境,整合了thymeleaf,Mybatis,Druid,ehcache可以拉下来直接进行二次开发,如果是WebService服务的话,去掉thymeleaf即可.
 
+4.maven多模块项目
+--------------
+该demo针对具体项目所整合.主要设计mybatis多模块使用,spring多模块使用,要点就是无论什么模块,只要配置文件加载位置正确配置,就不会出问题.
+
 ----------
-4.待添加
+5.待添加
