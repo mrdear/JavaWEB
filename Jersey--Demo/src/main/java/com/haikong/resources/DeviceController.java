@@ -1,17 +1,20 @@
 package com.haikong.resources;
 
 import com.alibaba.fastjson.JSONObject;
-import com.haikong.exception.DeviceException;
-import com.haikong.exception.ErrorCode;
 import com.haikong.service.DeviceService;
 import com.haikong.util.CheckUtil;
 import com.haikong.util.DeviceUtil;
+
 import org.springframework.stereotype.Controller;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.ws.rs.*;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 
@@ -24,19 +27,6 @@ import javax.ws.rs.core.MediaType;
 public class DeviceController {
     @Resource(name = "DeviceService")
     private DeviceService deviceService;
-
-    /**
-     * 测试全局异常托管
-     * @throws DeviceException
-     */
-    @GET
-    @Path("/testexception")
-    @Produces(MediaType.APPLICATION_JSON)
-    public void testException() throws DeviceException {
-        if (1==1){
-            throw new DeviceException(ErrorCode.OTHER_ERR);
-        }
-    }
 
     /**
      * 验证设备URL用的方法

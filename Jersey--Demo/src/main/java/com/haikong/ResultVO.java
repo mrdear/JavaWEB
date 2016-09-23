@@ -1,15 +1,15 @@
-package com.haikong.exception;
+package com.haikong;
 
 /**
  * Created by 牛李 on 2016/7/26.
  */
-public enum ErrorCode {
+public enum ResultVO {
     OK(0,"OK"),ID_INVALID(1,"ID is invalid"),OTHER_ERR(2,"未知错误");
 
     private int code;
     private String message;
 
-    ErrorCode(int code, String message) {
+    ResultVO(int code, String message) {
         this.code = code;
         this.message = message;
     }
