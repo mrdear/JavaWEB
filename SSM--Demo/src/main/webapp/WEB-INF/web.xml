@@ -9,19 +9,11 @@
     <param-name>webAppRootKey</param-name>
     <param-value>web.root</param-value>
   </context-param>
-  <listener>
-    <listener-class>org.springframework.web.util.WebAppRootListener</listener-class>
-  </listener>
-
-  <!--配置spring-->
   <context-param>
     <param-name>contextConfigLocation</param-name>
-    <!--配置文件的路径-->
     <param-value>classpath:spring/applicationContext.xml</param-value>
   </context-param>
-  <listener>
-    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-  </listener>
+
   <!--配置spring编码-->
   <!-- 配置字符编码过滤器，编码格式设为UTF-8，避免中文乱码 -->
   <filter>
@@ -65,6 +57,17 @@
     <url-pattern>/druid/*</url-pattern>
   </servlet-mapping>
 
+  <listener>
+    <listener-class>org.springframework.web.util.WebAppRootListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <!-- 主要负责处理由　JavaBeans Introspector的使用而引起的缓冲泄露。spring中对它的描述如下：它是一个在web应用关闭的时候,清除JavaBeans Introspector的监听器.web.xml中注册这个listener.可以保证在web 应用关闭的时候释放与掉这个web 应用相关的class loader 和由它管理的类如果你使用了JavaBeans Introspector来分析应用中的类,Introspector 缓冲中会保留这些类的引用.结果在你的应用关闭的时候,这些类以及web 应用相关的class loader没有被垃圾回收.不幸的是,清除Introspector的唯一方式是刷新整个缓冲. -->
+  <listener>
+    <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+  </listener>
+
 
   <!--配置springMVC-->
   <servlet>
@@ -81,10 +84,5 @@
     <servlet-name>dispatcher</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
-
-  <!--配置session过期时间-->
-  <session-config>
-    <session-timeout>600</session-timeout>
-  </session-config>
 
 </web-app>
