@@ -1,0 +1,54 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+  <!--context-param start-->
+  <!--配置获取项目的根路径,java类中使用System.getProperty("web.root")-->
+  <context-param>
+    <param-name>webAppRootKey</param-name>
+    <param-value>web.root</param-value>
+  </context-param>
+  <!--配置spring-->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <!--配置文件的路径-->
+    <param-value>classpath:spring/applicationContext.xml</param-value>
+  </context-param>
+  <!--filter start-->
+  <!-- 配置字符编码过滤器，编码格式设为UTF-8，避免中文乱码 -->
+  <filter>
+    <filter-name>encodingFilter</filter-name>
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value> <!--设置你想用的字符集，我这里用的是UTF-8-->
+    </init-param>
+    <!--强制使用该编码-->
+    <init-param>
+      <param-name>forceEncoding</param-name>
+      <param-value>true</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>encodingFilter</filter-name>
+    <url-pattern>/*</url-pattern> <!--设置你想过滤的页面或者是Servlet，根据自己的需要配置-->
+  </filter-mapping>
+
+
+  <!--listener start-->
+  <listener>
+    <listener-class>org.springframework.web.util.WebAppRootListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <!-- 主要负责处理由　JavaBeans Introspector的使用而引起的缓冲泄露。spring中对它的描述如下：它是一个在web应用关闭的时候,清除JavaBeans Introspector的监听器.web.xml中注册这个listener.可以保证在web 应用关闭的时候释放与掉这个web 应用相关的class loader 和由它管理的类如果你使用了JavaBeans Introspector来分析应用中的类,Introspector 缓冲中会保留这些类的引用.结果在你的应用关闭的时候,这些类以及web 应用相关的class loader没有被垃圾回收.不幸的是,清除Introspector的唯一方式是刷新整个缓冲. -->
+  <listener>
+    <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+  </listener>
+
+
+</web-app>

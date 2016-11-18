@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+    <persistence-unit name="TestJPA" transaction-type="RESOURCE_LOCAL">
+        <!--jpa的提供者-->
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <properties>
+            <!--声明数据库连接的驱动-->
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+            <!--jdbc数据库的连接地址-->
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/testframework"/>
+            <property name="hibernate.connection.username" value="root"/>
+            <property name="hibernate.connection.password" value="7946521"/>
+            <!--配置方言-->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
+            <!--激活查询日志功能-->
+            <property name="hibernate.show_sql" value="true"/>
+            <!--优雅地输出Sql-->
+            <property name="hibernate.format_sql" value="true"/>
+            <!--添加一条解释型标注-->
+            <property name="hibernate.use_sql_comments" value="false"/>
+            <!--配置如何根据java模型生成数据库表结构,常用update,validate-->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+        </properties>
+    </persistence-unit>
+</persistence>
