@@ -73,9 +73,8 @@ public class AlipayTrade {
     public boolean verifyNotify(HttpServletRequest request) throws AlipayApiException {
         Map<String,String> paranMap = SignUtil.request2Map(request);
         logger.debug("支付宝回调参数:"+paranMap.toString());
-        //"TRADE_CLOSED".equals(paranMap.get("trade_status"),交易关闭不验签
         boolean isVerify = false;
-        if (AliPayConfig.SUCCESS_REQUEST.equals(paranMap.get("trade_status"))) {
+        if (AliPayConfig.SUCCESS_REQUEST.equals(paranMap.get("trade_status")) || AliPayConfig.TRADE_CLOSED.equals(paranMap.get("trade_status"))) {
             isVerify = AlipaySignature.rsaCheckV1(paranMap, AliPayConfig.ALIPAY_PUBLIC_KEY, AliPayConfig.CHARSET); //调用SDK验证签名
         }
         logger.debug("支付宝验签结果"+isVerify);

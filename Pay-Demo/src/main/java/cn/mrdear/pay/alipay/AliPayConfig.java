@@ -51,6 +51,10 @@ public final class AliPayConfig {
      */
     public static final String SUCCESS_REQUEST = "TRADE_SUCCESS";
     /**
+     * 交易关闭回调(当该笔订单全部退款完毕,则交易关闭)
+     */
+    public static final String TRADE_CLOSED = "TRADE_CLOSED";
+    /**
      * 支付宝请求客户端入口
      */
     private volatile static AlipayClient alipayClient = null;

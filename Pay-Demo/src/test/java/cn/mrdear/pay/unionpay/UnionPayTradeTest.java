@@ -26,11 +26,15 @@ public class UnionPayTradeTest {
     @Test
     public void testTokenOpen(){
         UnionPayTrade unionPayTrade = new UnionPayTrade();
-        Map<String,String> customerInfoMap = new HashMap<String,String>();
-        customerInfoMap.put("accNo", "6222021304008026228");
-        customerInfoMap.put("customerInfo", "{}");
-        customerInfoMap.put("orderId", System.currentTimeMillis()+"");
-        unionPayTrade.tokenOpen(customerInfoMap);
+        Map<String,String> paramMap = new HashMap<String,String>();
+        paramMap.put("accNo", "6222021304008026228");
+        Map<String,String> customerInfo = new HashMap<String,String>();
+        customerInfo.put("certifTp", "01");						//证件类型
+        customerInfo.put("certifId", "341126197709218366");		//证件号码
+        customerInfo.put("customerNm", "全渠道");					//姓名
+        customerInfo.put("phoneNo", "13552535506");			        //手机号
+        paramMap.put("orderId", System.currentTimeMillis()+"");
+        unionPayTrade.tokenOpen(paramMap,customerInfo);
     }
 
     /**
@@ -39,16 +43,20 @@ public class UnionPayTradeTest {
     @Test
     public void testSmsCode(){
         UnionPayTrade unionPayTrade = new UnionPayTrade();
-        Map<String,String> customerInfoMap = new HashMap<String,String>();
-        customerInfoMap.put("currencyCode", "156");
-        customerInfoMap.put("txnAmt", "1");
-        customerInfoMap.put("tokenPayData", "{token=6235240xxxx17620679&trId=62000000016&tokenLevel=40&tokenBegin=20161030154742&tokenEnd=20211029154742&tokenType=01}");
-        customerInfoMap.put("customerInfo", "{}");
+        Map<String,String> paramMap = new HashMap<String,String>();
+        paramMap.put("currencyCode", "156");
+        paramMap.put("txnAmt", "1");
+        paramMap.put("tokenPayData", "{token=6235240xxxx17620679&trId=62000000016&tokenLevel=40&tokenBegin=20161030154742&tokenEnd=20211029154742&tokenType=01}");
+        Map<String,String> customerInfo = new HashMap<String,String>();
+        customerInfo.put("certifTp", "01");						//证件类型
+        customerInfo.put("certifId", "341126197709218366");		//证件号码
+        customerInfo.put("customerNm", "全渠道");					//姓名
+        customerInfo.put("phoneNo", "13552535506");			        //手机号
         String value = System.currentTimeMillis() + "";
         System.out.println(value);//商户订单
-        customerInfoMap.put("orderId", value);
-        customerInfoMap.put("txnSubType", "02");// 用于区分发送短信的类型：00——开通短信02——消费短信04——预授权451342
-        unionPayTrade.msg(customerInfoMap);
+        paramMap.put("orderId", value);
+        paramMap.put("txnSubType", "02");// 用于区分发送短信的类型：00——开通短信02——消费短信04——预授权451342
+        unionPayTrade.msg(paramMap,customerInfo);
     }
 
     /**
@@ -57,24 +65,25 @@ public class UnionPayTradeTest {
     @Test
     public void testConsume(){
         UnionPayTrade unionPayTrade = new UnionPayTrade();
-        Map<String,String> customerInfoMap = new HashMap<String,String>();
-        customerInfoMap.put("currencyCode", "156");
-        customerInfoMap.put("txnAmt", "200");
-        customerInfoMap.put("tokenPayData", "{token=6235xxxx000217620679&trId=62000000016&tokenLevel=40&tokenBegin=20161030154742&tokenEnd=20211029154742&tokenType=01}");
-        customerInfoMap.put("customerInfo", "{smsCode=451342}");
-        customerInfoMap.put("orderId", "1477903831526");
-        customerInfoMap.put("txnSubType", "01");//01：自助消费，通过地址的方式区分前台消费和后台消费（含无跳转 支付）03：分期付款
-        unionPayTrade.consume(customerInfoMap);
+        Map<String,String> paramMap = new HashMap<String,String>();
+        paramMap.put("currencyCode", "156");
+        paramMap.put("txnAmt", "200");
+        paramMap.put("tokenPayData", "{token=6235xxxx000217620679&trId=62000000016&tokenLevel=40&tokenBegin=20161030154742&tokenEnd=20211029154742&tokenType=01}");
+        Map<String,String> customerInfo = new HashMap<String,String>();
+        customerInfo.put("smsCode", "13552535506");			        //手机号
+        paramMap.put("orderId", "1477903831526");
+        paramMap.put("txnSubType", "01");//01：自助消费，通过地址的方式区分前台消费和后台消费（含无跳转 支付）03：分期付款
+        unionPayTrade.consume(paramMap,customerInfo);
     }
 
     @Test
     public void testRefund(){
         UnionPayTrade unionPayTrade = new UnionPayTrade();
-        Map<String, String> customerInfoMap = new HashMap<>();
-        customerInfoMap.put("orderId",System.currentTimeMillis()+"");
-        customerInfoMap.put("origQryId","201610312015598471058");
-        customerInfoMap.put("txnAmt","112555");
-        customerInfoMap.put("txnSubType", "00");
-        unionPayTrade.refund(customerInfoMap);
+        Map<String, String> paramMap = new HashMap<>();
+        paramMap.put("orderId",System.currentTimeMillis()+"");
+        paramMap.put("origQryId","201610312015598471058");
+        paramMap.put("txnAmt","112555");
+        paramMap.put("txnSubType", "00");
+        unionPayTrade.refund(paramMap);
     }
 }

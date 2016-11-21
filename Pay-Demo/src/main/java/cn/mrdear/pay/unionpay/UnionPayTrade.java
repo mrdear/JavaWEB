@@ -25,8 +25,8 @@ public class UnionPayTrade {
      * @param paramMap 请求参数
      * @return 请求返回结果
      */
-    public String tokenOpen(Map<String, String> paramMap){
-        return UnionPayConfig.getInstance().tokenOpen(paramMap);
+    public String tokenOpen(Map<String, String> paramMap,Map<String, String> customerInfo){
+        return UnionPayConfig.getInstance().tokenOpen(paramMap,customerInfo);
     }
 
     /**
@@ -34,8 +34,8 @@ public class UnionPayTrade {
      * @param paramMap 请求参数
      * @return 返回结果
      */
-    public Map<String,String> msg(Map<String, String> paramMap){
-        return UnionPayConfig.getInstance().msgSend(paramMap);
+    public Map<String,String> msg(Map<String, String> paramMap,Map<String, String> customerInfo){
+        return UnionPayConfig.getInstance().msgSend(paramMap,customerInfo);
     }
 
     /**
@@ -43,8 +43,8 @@ public class UnionPayTrade {
      * @param paramMap 请求参数
      * @return 请求结果
      */
-    public Map<String,String> consume(Map<String, String> paramMap){
-        return  UnionPayConfig.getInstance().consume(paramMap);
+    public Map<String,String> consume(Map<String, String> paramMap,Map<String, String> customerInfo){
+        return  UnionPayConfig.getInstance().consume(paramMap,customerInfo);
     }
 
     /**
