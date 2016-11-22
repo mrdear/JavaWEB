@@ -162,7 +162,11 @@ public class QueryParams<T> implements Specification<T> {
     @Override
     public Predicate toPredicate(Root<T> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
         Predicate restrictions = cb.and(toAndPredicate(root,cb));
-        restrictions = cb.and(restrictions,toOrPredicate(root,cb));
+        //如果无or条件,toOrPredicate会自带一个 or 1=1,前面用and的话则变为and 1=1造成错误,所以这里判断下
+        //这个貌似和版本有关,公司线上版本出现这个问题,本地测试没问题
+        if(!orders.isEmpty()){
+            restrictions = cb.and(restrictions,toOrPredicate(root,cb));
+        }
         query.orderBy(toOrders(root,cb));
         return restrictions;
     }
