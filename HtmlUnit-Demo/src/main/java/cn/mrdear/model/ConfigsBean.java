@@ -1,5 +1,8 @@
 package cn.mrdear.model;
 
+import java.io.UnsupportedEncodingException;
+import java.util.Base64;
+
 /**
  * @author Niu Li
  * @date 2016/10/8
@@ -43,6 +46,13 @@ public class ConfigsBean {
 
         public void setRemarks(String remarks) {
             this.remarks = remarks;
+            try {
+                if (remarks != null && !"".equals(remarks)){
+                    remarks_base64 = Base64.getEncoder().encodeToString(remarks.getBytes("UTF-8"));
+                }
+            } catch (UnsupportedEncodingException e) {
+                remarks_base64 = "节点...";
+            }
         }
 
         public String getServer() {

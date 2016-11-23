@@ -20,7 +20,6 @@ import cn.mrdear.util.WebClientUtil;
 /**
  * 使用步骤
  * 1.配置setting.json里面的ss配置文件地址,如果有的话,会读取,然后值修改里面的节点配置,没有的话则创建新文件,按照默认配置来
- *  另外可以可以在Setting里面配置自己拥有的固定节点.
  * 2.启动main代码测试
  * 3.打包为jar运行
  * 4.配合doc里面的bat脚本,可以很大的简化你的运行.
