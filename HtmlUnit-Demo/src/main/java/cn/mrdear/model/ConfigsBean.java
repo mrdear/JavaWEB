@@ -5,6 +5,23 @@ package cn.mrdear.model;
  * @date 2016/10/8
  */
 public class ConfigsBean {
+
+        /**
+        * remarks : 加利福尼亚，洛杉矶，美国
+        * server : 23.105.203.111
+        * server_port : 11111
+        * password : 1111111
+        * method : aes-256-cfb
+        * obfs : plain
+        * obfsparam :
+        * remarks_base64 :
+        * tcp_over_udp : false
+        * udp_over_tcp : false
+        * protocol : origin
+        * obfs_udp : false
+        * enable : true
+        * id : 6B-7C-2E-E6-75-BD-0B-75-B6-12-30-06-39-61-69-37
+        */
         private String remarks;
         private String server;
         private int server_port;

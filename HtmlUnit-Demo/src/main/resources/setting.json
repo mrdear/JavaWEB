@@ -1,3 +1,21 @@
 {
-  "sspath":"E:\\jar\\gui-config.json"
+  "sspath":"E:\\jar\\gui-config.json",
+  "local":[
+    {
+      "remarks" : "加利福尼亚，洛杉矶，美国",
+      "server" : "23.105.203.111",
+      "server_port" : 111,
+      "password" : "1111",
+      "method" : "aes-256-cfb",
+      "obfs" : "plain",
+      "obfsparam" : "",
+      "remarks_base64" : "",
+      "tcp_over_udp" : false,
+      "udp_over_tcp" : false,
+      "protocol" : "origin",
+      "obfs_udp" : false,
+      "enable" : true,
+      "id" : "6B-7C-2E-E6-75-BD-0B-75-B6-12-30-06-39-61-69-37"
+    }
+  ]
 }

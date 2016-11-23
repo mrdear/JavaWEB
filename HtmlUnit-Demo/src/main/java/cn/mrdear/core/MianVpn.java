@@ -26,17 +26,17 @@ public class MianVpn {
         //拿到全部a标签
         DomNodeList<DomElement> domNodeList = page.getElementsByTagName("a");
 
-        List<ConfigsBean> results = domNodeList.stream()
-                //找到内容为Surge的a标签
-                .filter(domElement -> {
+        return domNodeList.stream()
+                          //找到内容为Surge的a标签
+                          .filter(domElement -> {
                     if (domElement.getTextContent().equals("Surge")) {
                         System.out.println(domElement.getTextContent());
                         return true;
                     }
                     return false;
                 })
-                //模拟点击,并取出结果
-                .map(domElement -> {
+                          //模拟点击,并取出结果
+                          .map(domElement -> {
                     HtmlPage tempPage = null;
                     try {
                         webClient.waitForBackgroundJavaScript(500);
@@ -54,11 +54,10 @@ public class MianVpn {
                     }
                     return null;
                 })
-                //过滤掉为null的结果
-                .filter(configsBean -> configsBean != null)
-                //转换为list
-                .collect(Collectors.toList());
-            return results;
+                          //过滤掉为null的结果
+                          .filter(configsBean -> configsBean != null)
+                          //转换为list
+                          .collect(Collectors.toList());
     }
 
     /**
