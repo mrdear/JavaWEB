@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE messages SYSTEM "message.dtd" >
+<messages>
+    <message key="register" >
+        <content>尊敬的会员，这是您的验证码{code_set}（有效时间{minute_set}分钟），感谢您的关注！</content>
+    </message>
+    <message key="gift" >
+        <content>您的朋友{giver_mobile}赠送给您{card_num}张"{card_name}",请及时关注微信"融信科技"公众号，进行查收。</content></message>
+    <message key="findpassword" >
+        <content>尊敬的会员，这是您的支付密码已重置为{passwd_set}，登录后请立即修改密码。</content>
+    </message>
+    <message key="consume" >
+        <content>尊敬的会员，您当前账户余额{bal_amt},您尾号{end_code}的卡号消费了{amt_cuy}元，如果不是本人消费，请立即联系管理员处理。</content>
+    </message>
+</messages>

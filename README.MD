@@ -33,7 +33,11 @@
 
 7.JPA-Demo
 --------------
-学习SpringDataJPA使用,需要配合博客博文,该Demo主要是对复杂查询的封装,为原生sql和JPQL查询封装一个通用的方法.具体可以看代码的test包中的测试代码
+学习SpringDataJPA使用,需要配合博客博文http://www.jianshu.com/p/e3812fc23f83,该Demo主要是对复杂查询的封装,为原生sql和JPQL查询封装一个通用的方法.具体可以看代码的test包中的测试代码
 
-8.待添加
+8.Util-Demo
+--------------
+开发中常用工具类的写法,比如PropertiesUtil,XmlUtil,HttpUtil等,该Demo希望大家能不断扩充.
+
+9.待添加
 --------------
