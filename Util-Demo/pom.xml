@@ -9,6 +9,18 @@
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
+        <!--RSA依赖-->
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15on</artifactId>
+            <version>1.52</version>
+        </dependency>
+        <!--加密解密依赖-->
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.10</version>
+        </dependency>
         <!--xmlUtil依赖-->
         <dependency>
             <groupId>dom4j</groupId>
