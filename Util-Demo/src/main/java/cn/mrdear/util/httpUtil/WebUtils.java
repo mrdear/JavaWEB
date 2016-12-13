@@ -1,5 +1,7 @@
 package cn.mrdear.util.httpUtil;
 
+import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.NameValuePair;
 import org.apache.http.ParseException;
@@ -26,12 +28,20 @@ import org.apache.http.util.EntityUtils;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.security.KeyStore;
 import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import javax.net.ssl.SSLContext;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * WEB连接中常用到的方法
@@ -53,6 +63,129 @@ public abstract class WebUtils {
 	}
 
 	/**
+	 * 添加cookie
+	 * @param response HttpServletResponse
+	 * @param name  Cookie名称
+	 * @param value  Cookie值
+	 * @param maxAge  有效期(单位: 秒)
+	 * @param path  路径
+	 * @param domain  域
+	 * @param secure  是否启用加密
+	 */
+	public static void addCookie(HttpServletResponse response, String name, String value, Integer maxAge, String path, String domain, Boolean secure) {
+
+		try {
+			name = URLEncoder.encode(name, "UTF-8");
+			value = URLEncoder.encode(value, "UTF-8");
+			Cookie cookie = new Cookie(name, value);
+			if (maxAge != null) {
+				cookie.setMaxAge(maxAge);
+			}
+			if (StringUtils.isNotEmpty(path)) {
+				cookie.setPath(path);
+			}
+			if (StringUtils.isNotEmpty(domain)) {
+				cookie.setDomain(domain);
+			}
+			if (secure != null) {
+				cookie.setSecure(secure);
+			}
+			response.addCookie(cookie);
+		} catch (UnsupportedEncodingException e) {
+			throw new RuntimeException(e.getMessage(), e);
+		}
+	}
+	/**
+	 * 获取cookie
+	 * @param request HttpServletRequest
+	 * @param name Cookie名称
+	 * @return Cookie值，若不存在则返回null
+	 */
+	public static String getCookie(HttpServletRequest request, String name) {
+
+		Cookie[] cookies = request.getCookies();
+		if (cookies != null) {
+			try {
+				name = URLEncoder.encode(name, "UTF-8");
+				for (Cookie cookie : cookies) {
+					if (name.equals(cookie.getName())) {
+						return URLDecoder.decode(cookie.getValue(), "UTF-8");
+					}
+				}
+			} catch (UnsupportedEncodingException e) {
+				throw new RuntimeException(e.getMessage(), e);
+			}
+		}
+		return null;
+	}
+	/**
+	 * 移除cookie
+	 * @param response HttpServletResponse
+	 * @param name Cookie名称
+	 * @param path 路径
+	 * @param domain 域
+	 */
+	public static void removeCookie(HttpServletResponse response, String name, String path, String domain) {
+		try {
+			name = URLEncoder.encode(name, "UTF-8");
+			Cookie cookie = new Cookie(name, null);
+			cookie.setMaxAge(0);
+			if (StringUtils.isNotEmpty(path)) {
+				cookie.setPath(path);
+			}
+			if (StringUtils.isNotEmpty(domain)) {
+				cookie.setDomain(domain);
+			}
+			response.addCookie(cookie);
+		} catch (UnsupportedEncodingException e) {
+			throw new RuntimeException(e.getMessage(), e);
+		}
+	}
+
+	/**
+	 * 把request请求参数转换为Map<String,String>
+	 * @param request 该请求
+	 * @return Map<String,String>格式的参数
+	 */
+	@SuppressWarnings("unchecked")
+	public static Map<String,String> request2Map(HttpServletRequest request){
+		Enumeration<String> names = request.getParameterNames();
+		Map<String, String> resData = new HashMap<String, String>();
+		while (names.hasMoreElements()) {
+			String name = names.nextElement();
+			resData.put(name, request.getParameter(name));
+		}
+		return resData;
+	}
+
+	/**
+	 * 连接Map键值对
+	 * @param map Map
+	 * @param prefix 前缀
+	 * @param suffix 后缀
+	 * @param separator 连接符
+	 * @param ignoreEmptyValue 忽略空值
+	 * @param ignoreKeys 忽略Key
+	 * @return 字符串
+	 */
+	public static String joinKeyValue(Map<String, ?> map, String prefix, String suffix, String separator,
+									  boolean ignoreEmptyValue, String... ignoreKeys) {
+		List<String> list = new ArrayList<String>();
+		if (map != null) {
+			//使用Java8语法会更加简洁
+			for (Map.Entry<String, ?> entry : map.entrySet()) {
+				String key = entry.getKey();
+				String value = String.valueOf(entry.getValue());
+				if (StringUtils.isNotEmpty(key) && !ArrayUtils.contains(ignoreKeys, key)
+						&& (!ignoreEmptyValue || StringUtils.isNotEmpty(value))) {
+					list.add(key + "=" + (value != null ? value : ""));
+				}
+			}
+		}
+		return (prefix != null ? prefix : "") + StringUtils.join(list, separator) + (suffix != null ? suffix : "");
+	}
+
+	/**
 	 * POST请求
 	 * 
 	 * @param url
@@ -70,7 +203,7 @@ public abstract class WebUtils {
 				for (Map.Entry<String, ?> entry : parameterMap.entrySet()) {
 					String name = entry.getKey();
 					String value = String.valueOf(entry.getValue());
-					if (name != null && !"".equals(name)) {
+					if (StringUtils.isNoneEmpty(value)) {
 						nameValuePairs.add(new BasicNameValuePair(name, value));
 					}
 				}
@@ -158,7 +291,7 @@ public abstract class WebUtils {
 				for (Map.Entry<String, ?> entry : parameterMap.entrySet()) {
 					String name = entry.getKey();
 					String value = String.valueOf(entry.getValue());
-					if (name != null && !"".equals(name)) {
+					if (StringUtils.isNoneEmpty(value)) {
 						nameValuePairs.add(new BasicNameValuePair(name, value));
 					}
 				}

@@ -9,6 +9,13 @@
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
+        <!--公共依赖-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.4</version>
+        </dependency>
+
         <!--RSA依赖-->
         <dependency>
             <groupId>org.bouncycastle</groupId>
@@ -33,7 +40,11 @@
             <artifactId>httpclient</artifactId>
             <version>4.5.2</version>
         </dependency>
-
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
         <!--redis依赖-->
         <dependency>
             <groupId>redis.clients</groupId>
@@ -69,6 +80,7 @@
             <artifactId>logback-classic</artifactId>
             <version>1.1.2</version>
         </dependency>
+
     </dependencies>
 
     <build>
