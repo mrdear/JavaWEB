@@ -31,11 +31,12 @@ public class AlipayTrade {
      * url https://doc.open.alipay.com/doc2/detail.htm?treeId=203&articleId=105463&docType=1#s1
      * @return web支付的表单
      */
-    public String TradeWapPayRequest(Map<String, ?> sParaTemp){
+    public String TradeWapPayRequest(Map<String, String> sParaTemp){
         AlipayTradeWapPayRequest alipayRequest = new AlipayTradeWapPayRequest();
         alipayRequest.setReturnUrl(AliPayConfig.RETURN_URL);
         alipayRequest.setNotifyUrl(AliPayConfig.PAY_NOTIFY);
         // 待请求参数数组
+        sParaTemp.put("seller_id",AliPayConfig.SELLER_ID);
         alipayRequest.setBizContent(JSON.toJSONString(sParaTemp));
         String form = "";
         try {

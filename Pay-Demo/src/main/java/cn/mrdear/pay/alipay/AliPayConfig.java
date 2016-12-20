@@ -55,6 +55,10 @@ public final class AliPayConfig {
      */
     public static final String TRADE_CLOSED = "TRADE_CLOSED";
     /**
+     * 收款方账号
+     */
+    public static final String SELLER_ID = "xxxx@qq.com";
+    /**
      * 支付宝请求客户端入口
      */
     private volatile static AlipayClient alipayClient = null;

@@ -19,8 +19,7 @@ public class AlipayTradeTest {
         Map<String,String> paraMap = new HashMap<String,String>();
         paraMap.put("out_trade_no",System.currentTimeMillis()+"");
         paraMap.put("total_amount","0.01");
-        paraMap.put("subject","测试退款");
-        paraMap.put("seller_id",System.currentTimeMillis()+"");
+        paraMap.put("subject","测试下单");
         paraMap.put("product_code","QUICK_WAP_PAY");
         alipayTrade.TradeWapPayRequest(paraMap);
     }
