@@ -94,11 +94,20 @@ public abstract class DateUtil {
 
         Date date = null;
         try {
-            date = getSdf(sdf).parse(str);
+            date = parseCanThrow(str, sdf);
         } catch (ParseException e) {
             e.printStackTrace();
         }
         return date;
+    }
+    /**
+     * 把字符串按照指定格式转换,需要主动抛异常情况下使用
+     * @param str 时间串
+     * @param sdf 给定转换格式
+     * @return 转换后的时间
+     */
+    public static Date parseCanThrow(String str, String sdf) throws ParseException {
+        return getSdf(sdf).parse(str);
     }
 
 }
