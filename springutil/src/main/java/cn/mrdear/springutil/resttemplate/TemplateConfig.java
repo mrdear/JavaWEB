@@ -6,5 +6,7 @@ package cn.mrdear.springutil.resttemplate;
  * @date 2017/1/18
  */
 public class TemplateConfig {
-
+    /**
+     * push
+     */
 }
