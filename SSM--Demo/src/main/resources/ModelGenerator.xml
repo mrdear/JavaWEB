@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <!--指定特定数据库的jdbc驱动jar包的位置-->
+    <classPathEntry location="D:\develop\maven\my_local_repository\mysql\mysql-connector-java\5.1.39\mysql-connector-java-5.1.39.jar"/>
+
+    <context id="default" targetRuntime="MyBatis3">
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="tk.mybatis.mapper.common.Mapper"/>
+            <!-- caseSensitive默认false，当数据库表名区分大小写时，可以将该属性设置为true -->
+            <property name="caseSensitive" value="true"/>
+        </plugin>
+
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/ssm"
+                        userId="root"
+                        password="7946521">
+        </jdbcConnection>
+
+        <!--只生成Java model-->
+        <javaModelGenerator targetPackage="cn.mrdear.entity" targetProject="F:\Git\JavaWEB\SSM--Demo\src\main\java"/>
+
+        <sqlMapGenerator targetPackage="cn.mrdear.entity"  targetProject="F:\Git\JavaWEB\SSM--Demo\src\main\resources"/>
+
+        <javaClientGenerator targetPackage="cn.mrdear.entity" targetProject="F:\Git\JavaWEB\SSM--Demo\src\main\java" type="XMLMAPPER" />
+
+        <table tableName="%" enableCountByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"
+               enableUpdateByExample="false">
+            <generatedKey column="book_id" sqlStatement="Mysql" identity="true" />
+        </table>
+
+    </context>
+</generatorConfiguration>

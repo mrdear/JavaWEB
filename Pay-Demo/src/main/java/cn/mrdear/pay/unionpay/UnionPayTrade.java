@@ -6,7 +6,6 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 
-import javax.servlet.http.HttpServletRequest;
 
 import cn.mrdear.pay.unionpay.sdk.AcpService;
 import cn.mrdear.pay.util.SignUtil;

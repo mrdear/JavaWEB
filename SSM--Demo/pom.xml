@@ -2,28 +2,27 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>cn.mrdear</groupId>
-  <artifactId>mrdear</artifactId>
+  <artifactId>SSM-Demo</artifactId>
   <packaging>war</packaging>
   <version>1.0.0</version>
   <name>mrdear Maven Webapp</name>
   <url>http://maven.apache.org</url>
+
   <properties>
     <spring.version>4.3.2.RELEASE</spring.version>
     <mybatis.version>3.4.1</mybatis.version>
     <mybatis.spring>1.3.0</mybatis.spring>
     <mybatis.pagehelper>4.1.6</mybatis.pagehelper>
+    <mybatis.mapper>3.3.9</mybatis.mapper>
     <ehcache.version>2.6.11</ehcache.version>
     <ehcache.web>2.0.4</ehcache.web>
     <ehcache.mybatis>1.0.0</ehcache.mybatis>
-    <thymeleaf.version>3.0.1.RELEASE</thymeleaf.version>
-    <shiro.version>1.3.0</shiro.version>
     <hibernate.validator>5.2.4.Final</hibernate.validator>
     <druid.version>1.0.25</druid.version>
     <fastjson.version>1.2.16</fastjson.version>
     <mysql.version>5.1.39</mysql.version>
     <slf4j.version>1.7.21</slf4j.version>
     <logback.version>1.1.7</logback.version>
-    <guava.version>19.0</guava.version>
     <httpclient.version>4.5.2</httpclient.version>
     <commonlang.version>3.4</commonlang.version>
     <commonbean.version>1.9.2</commonbean.version>
@@ -34,27 +33,8 @@
   </properties>
 
     <dependencies>
+
       <!-- springframe start -->
-      <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-core</artifactId>
-        <version>${spring.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-web</artifactId>
-        <version>${spring.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-jdbc</artifactId>
-        <version>${spring.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-tx</artifactId>
-        <version>${spring.version}</version>
-      </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-webmvc</artifactId>
@@ -62,7 +42,7 @@
       </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
-        <artifactId>spring-aop</artifactId>
+        <artifactId>spring-jdbc</artifactId>
         <version>${spring.version}</version>
       </dependency>
       <dependency>
@@ -75,7 +55,6 @@
         <artifactId>spring-test</artifactId>
         <version>${spring.version}</version>
       </dependency>
-      <!-- springframe end -->
       <!--cglib动态代理-->
       <dependency>
         <groupId>cglib</groupId>
@@ -93,7 +72,6 @@
         <artifactId>aspectjrt</artifactId>
         <version>1.8.6</version>
       </dependency>
-
       <!--mybatis start-->
       <dependency>
         <groupId>org.mybatis</groupId>
@@ -125,35 +103,42 @@
         <artifactId>ehcache-web</artifactId>
         <version>${ehcache.web}</version>
       </dependency>
-      <!--mybatis end-->
+      <!--通用mapper-->
+      <dependency>
+        <groupId>tk.mybatis</groupId>
+        <artifactId>mapper</artifactId>
+        <version>${mybatis.mapper}</version>
+      </dependency>
+      <!--给通用mapper提供注解 start-->
+      <dependency>
+        <groupId>javax.persistence</groupId>
+        <artifactId>persistence-api</artifactId>
+        <version>1.0.2</version>
+      </dependency>
       <!--mysql start-->
       <dependency>
         <groupId>mysql</groupId>
         <artifactId>mysql-connector-java</artifactId>
         <version>${mysql.version}</version>
       </dependency>
-      <!--mysql end-->
       <!--druid -start-->
       <dependency>
         <groupId>com.alibaba</groupId>
         <artifactId>druid</artifactId>
         <version>${druid.version}</version>
       </dependency>
-      <!--druid -end-->
       <!--fastjson start-->
       <dependency>
         <groupId>com.alibaba</groupId>
         <artifactId>fastjson</artifactId>
         <version>${fastjson.version}</version>
       </dependency>
-      <!--fastjson end-->
       <!--hibervate validate start-->
       <dependency>
         <groupId>org.hibernate</groupId>
         <artifactId>hibernate-validator</artifactId>
         <version>${hibernate.validator}</version>
       </dependency>
-      <!--hibervate validate end-->
       <!--commons start -->
       <dependency>
         <groupId>org.apache.commons</groupId>
@@ -175,7 +160,6 @@
         <artifactId>commons-fileupload</artifactId>
         <version>${commonfile.version}</version>
       </dependency>
-      <!--commons end -->
       <!--log start-->
       <dependency>
         <groupId>org.slf4j</groupId>
@@ -202,12 +186,37 @@
         <artifactId>jcl-over-slf4j</artifactId>
         <version>${slf4j.jcl.version}</version>
       </dependency>
-      <!--log end-->
     </dependencies>
 
   <build>
-    <pluginManagement>
+
+    <finalName>ssm</finalName>
+
       <plugins>
+        <!--通用mapper插件-->
+        <plugin>
+          <groupId>org.mybatis.generator</groupId>
+          <artifactId>mybatis-generator-maven-plugin</artifactId>
+          <version>1.3.2</version>
+          <configuration>
+            <configurationFile>../SSM--Demo/src/main/resources/ModelGenerator.xml</configurationFile>
+            <overwrite>true</overwrite>
+            <verbose>true</verbose>
+          </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>mysql</groupId>
+              <artifactId>mysql-connector-java</artifactId>
+              <version>5.1.39</version>
+            </dependency>
+            <dependency>
+              <groupId>tk.mybatis</groupId>
+              <artifactId>mapper</artifactId>
+              <version>3.3.9</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+        <!--编译插件设为1.8-->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
@@ -218,6 +227,5 @@
           </configuration>
         </plugin>
       </plugins>
-    </pluginManagement>
   </build>
 </project>
