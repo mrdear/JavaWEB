@@ -7,7 +7,7 @@
   <version>1.0.0</version>
   <packaging>jar</packaging>
 
-  <name>commonpay</name>
+  <name>pay-demo</name>
   <url>http://maven.apache.org</url>
 
   <properties>

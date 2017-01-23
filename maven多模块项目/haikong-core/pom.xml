@@ -9,7 +9,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>core</artifactId>
     <packaging>war</packaging>
-    <name>core Maven Webapp</name>
+    <name>haikong-core</name>
     <url>http://maven.apache.org</url>
 
     <dependencies>
