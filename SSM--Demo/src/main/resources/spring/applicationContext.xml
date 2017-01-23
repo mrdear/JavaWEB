@@ -65,19 +65,19 @@
         <!-- 加载mybatis的全局配置文件 -->
         <property name="configLocation" value="classpath:mybatis/sqlmapconfig.xml" />
         <!--配置mapper.xml扫描-->
-        <property name="mapperLocations" value="classpath:mybatis/*/*.xml"/>
+        <property name="mapperLocations" value="classpath:mybatis/mapper/*.xml"/>
     </bean>
 
     <!--配置mapper.java扫描-->
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+    <bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="cn.mrdear.mapper"/>
+        <property name="properties">
+            <value>
+                mappers=tk.mybatis.mapper.common.Mapper
+            </value>
+        </property>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
-
-    <!--线程安全的sqlSessionTemplate,如果采用DAO开发,那么就使用这个-->
-    <!--<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">-->
-        <!--<constructor-arg ref="sqlSessionFactory" />-->
-    <!--</bean>-->
 
     <!--产生ehcache的缓存管理器,并把ehcache的cacheManager注入到Spring的EhCacheCacheManager-->
     <bean id="defaultCacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
