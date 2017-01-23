@@ -5,7 +5,7 @@
   <artifactId>SSM-Demo</artifactId>
   <packaging>war</packaging>
   <version>1.0.0</version>
-  <name>mrdear Maven Webapp</name>
+  <name>SSM-Demo</name>
   <url>http://maven.apache.org</url>
 
   <properties>

@@ -1,9 +1,13 @@
 package cn.mrdear.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.*;
 
 @Table(name = "book")
-public class Book {
+public class Book implements Serializable{
+
+    private static final long serialVersionUID = 4189250872871101725L;
     /**
      * 图书ID
      */
