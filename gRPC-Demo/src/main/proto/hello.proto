@@ -1,0 +1,23 @@
+//指定proto3格式
+syntax = "proto3";
+//一些生成代码的设置
+option java_multiple_files = true;//以外部类模式生成
+option java_package = "io.grpc.examples.helloworld";//所在包名
+option java_outer_classname = "HelloWorldProto";//最外层类名称
+
+package helloworld;
+
+//定义了一个service
+service Greeter {
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
+
+//定义了一个消息请求体
+message HelloRequest {
+  string name = 1;
+}
+
+//定义了一个消息回复体
+message HelloReply {
+  string message = 1;
+}

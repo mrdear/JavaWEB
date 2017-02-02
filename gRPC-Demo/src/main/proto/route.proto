@@ -1,0 +1,64 @@
+//指定proto3格式
+syntax = "proto3";
+//一些生成代码的设置
+option java_multiple_files = true;//以外部类模式生成
+option java_package = "cn.mrdear.route";//所在包名
+option java_outer_classname = "RouteProto";//最外层类名称
+
+
+//定义服务
+service RouteGuide{
+    //得到指定点的feature
+    //一个 简单 RPC ， 客户端使用存根发送请求到服务器并等待响应返回，就像平常的函数调用一样。
+    rpc GetFeature(Point) returns (Feature) {}
+    //获取一个矩形内的点
+    //一个 服务器端流式 RPC ， 客户端发送请求到服务器，拿到一个流去读取返回的消息序列。 客户端读取返回的流，
+    //直到里面没有任何消息。从例子中可以看出，通过在 响应 类型前插入 stream 关键字，可以指定一个服务器端的流方法。
+    rpc ListFeatures(Rectangle) returns (stream Feature){}
+    //记录该点
+    //一个 客户端流式 RPC ， 客户端写入一个消息序列并将其发送到服务器，同样也是使用流。一旦客户端完成写入消息，
+    //它等待服务器完成读取返回它的响应。通过在 请求 类型前指定 stream 关键字来指定一个客户端的流方法。
+    rpc RecordRoute(stream Point) returns (RouteSummary){}
+    //路由交流
+    //一个 双向流式 RPC 是双方使用读写流去发送一个消息序列。两个流独立操作，因此客户端和服务器
+    //可以以任意喜欢的顺序读写：比如， 服务器可以在写入响应前等待接收所有的客户端消息，或者可以交替 的读取和写入消息，
+    //或者其他读写的组合。每个流中的消息顺序被预留。你可以通过在请求和响应前加 stream 关键字去制定方法的类型。
+    rpc RouteChat(stream RouteNote) returns (stream RouteNote){}
+}
+
+
+//代表经纬度
+message Point {
+    int32 latitude = 1;
+    int32 longitude = 2;
+}
+//由两个点确定的一个方块
+message Rectangle{
+    Point lo = 1;
+    Point hi = 2;
+}
+//某一位置的名称
+message Feature {
+
+    string name = 1;
+
+    Point location = 2;
+}
+
+// Not used in the RPC.  Instead, this is here for the form serialized to disk.
+message FeatureDatabase {
+    repeated Feature feature = 1;
+}
+//给某一点发送消息
+message RouteNote{
+    Point location = 1;
+    string message = 2;
+}
+
+//记录收到的信息
+message RouteSummary{
+    int32 point_count = 1;
+    int32 feture_count = 2;
+    int32 distance = 3;
+    int32 elapsed_time = 4;
+}

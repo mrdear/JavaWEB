@@ -39,5 +39,9 @@ SpringDataJPA+QueryDSL使用,需要配合博客博文http://www.jianshu.com/p/e3
 --------------
 开发中常用工具类的写法,比如PropertiesUtil,XmlUtil,HttpUtil等,该Demo希望大家能不断扩充.
 
-9.待添加
+9.gRPC-Demo
+--------------
+参考官方案例的gRPC的Demo,里面有Hello World和 RouteGuide案例,适合入门.相关博文还在整理,适时加入
+
+10.待添加
 --------------
