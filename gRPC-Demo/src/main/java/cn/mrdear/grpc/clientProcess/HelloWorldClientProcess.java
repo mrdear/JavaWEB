@@ -1,4 +1,4 @@
-package cn.mrdear.grpc.hello;
+package cn.mrdear.grpc.clientProcess;
 
 import java.util.concurrent.TimeUnit;
 
@@ -10,25 +10,27 @@ import io.grpc.examples.helloworld.HelloReply;
 import io.grpc.examples.helloworld.HelloRequest;
 
 /**
+ * 按照hello world来分析整个客户端执行过程
  * @author Niu Li
  * @date 2017/1/28
  */
-public class HelloWorldClient {
+public class HelloWorldClientProcess {
 
     private final ManagedChannel channel; //一个gRPC信道
     private final GreeterGrpc.GreeterBlockingStub blockingStub;//阻塞/同步 存根
 
    //初始化信道和存根
-    public HelloWorldClient(String host,int port){
+    public HelloWorldClientProcess(String host, int port){
+
         this(ManagedChannelBuilder.forAddress(host, port)
                                   // Channels are secure by default (via SSL/TLS). For the example we disable TLS to avoid
                                   // needing certificates.
                                   .usePlaintext(true));
     }
 
-    /** Construct client for accessing RouteGuide server using the existing channel. */
-    private HelloWorldClient(ManagedChannelBuilder<?> channelBuilder) {
-        channel = channelBuilder.build();
+    //创建channel的时候添加上转换器
+    private HelloWorldClientProcess(ManagedChannelBuilder<?> channelBuilder) {
+        channel = channelBuilder.intercept(new ClientInterruptImpl()).build();
         //使用gzip压缩
         blockingStub = GreeterGrpc.newBlockingStub(channel).withCompression("gzip");
     }
@@ -51,7 +53,7 @@ public class HelloWorldClient {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        HelloWorldClient client = new HelloWorldClient("127.0.0.1",50051);
+        HelloWorldClientProcess client = new HelloWorldClientProcess("127.0.0.1",50051);
         try {
             for(int i=0;i<5;i++){
                 client.greet("world:"+i);
