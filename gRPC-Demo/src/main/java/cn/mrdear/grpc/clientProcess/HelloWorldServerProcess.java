@@ -1,19 +1,21 @@
-package cn.mrdear.grpc.hello;
+package cn.mrdear.grpc.clientProcess;
 
 import java.io.IOException;
 
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
+import io.grpc.ServerInterceptors;
 import io.grpc.examples.helloworld.GreeterGrpc;
 import io.grpc.examples.helloworld.HelloReply;
 import io.grpc.examples.helloworld.HelloRequest;
 import io.grpc.stub.StreamObserver;
 
 /**
+ * 按照hello world来分析整个服务端执行过程
  * @author Niu Li
  * @date 2017/1/28
  */
-public class HelloWorldServer {
+public class HelloWorldServerProcess {
 
     private int port = 50051;
     private Server server;
@@ -23,20 +25,21 @@ public class HelloWorldServer {
      * @throws IOException
      */
     private void start() throws IOException {
+        System.out.println("service start...");
+
         server = ServerBuilder.forPort(port)
-                              .addService(new GreeterImpl())
+                              .addService(ServerInterceptors.intercept(new  GreeterImpl(),new ServerInterruptImpl()))
                               .build()
                               .start();
 
-        System.out.println("service start...");
-
+        System.out.println("service started");
         //程序正常退出,系统调用 System.exit方法或虚拟机被关闭时执行该调用
         Runtime.getRuntime().addShutdownHook(new Thread() {
 
             @Override
             public void run() {
                 System.err.println("*** shutting down gRPC server since JVM is shutting down");
-                HelloWorldServer.this.stop();
+                HelloWorldServerProcess.this.stop();
                 System.err.println("*** server shut down");
             }
         });
@@ -57,7 +60,7 @@ public class HelloWorldServer {
 
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        final HelloWorldServer server = new HelloWorldServer();
+        final HelloWorldServerProcess server = new HelloWorldServerProcess();
         server.start();
         server.blockUntilShutdown();
     }

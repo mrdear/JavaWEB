@@ -45,6 +45,9 @@ public class RouteGuideClient {
         channel.shutdown().awaitTermination(5, TimeUnit.SECONDS);
     }
 
+    /**
+     * 主方法中调用这一些函数的执行
+     */
     public static void main(String[] args) throws InterruptedException {
         List<Feature> features;
         try {
@@ -58,7 +61,7 @@ public class RouteGuideClient {
 //            client.getFeature(409146138, -746188906);//成功案例
 //            client.getFeature(0, 0);//失败案例
 //            client.listFeatures(400000000, -750000000, 420000000, -730000000);
-//              client.recordRoute(features, 10);
+//            client.recordRoute(features, 10);
             CountDownLatch finishLatch = client.routeChat();
 
             if (!finishLatch.await(1, TimeUnit.MINUTES)) {
@@ -104,7 +107,7 @@ public class RouteGuideClient {
             System.out.println("RPC failed " +e.getMessage());
         }
     }
-
+//    客户端流式RPC
     public void recordRoute(List<Feature> features, int numPoints) throws InterruptedException {
         System.out.println("start recordRoute");
         final CountDownLatch finishLatch = new CountDownLatch(1);
@@ -153,7 +156,7 @@ public class RouteGuideClient {
             System.out.println("recordRoute can not finish within 1 minutes");
         }
     }
-
+//    双向流式RPC
     public CountDownLatch routeChat() {
         System.out.println("start routeChat");
         final CountDownLatch finishLatch = new CountDownLatch(1);
