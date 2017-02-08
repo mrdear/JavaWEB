@@ -6,6 +6,7 @@ package cn.mrdear.grpc.clientProcess.forwardExample;
  * @date 2017/2/4
  */
 public class InterceptTest {
+
     public static void main(String[] args) {
         Client client = new ClientImp();//主要想执行的方法
         //构造第一个拦截器

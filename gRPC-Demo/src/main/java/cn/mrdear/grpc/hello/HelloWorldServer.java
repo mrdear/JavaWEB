@@ -20,26 +20,22 @@ public class HelloWorldServer {
 
     /**
      * 启动服务
-     * @throws IOException
      */
     private void start() throws IOException {
+
+        System.out.println("service start...");
         server = ServerBuilder.forPort(port)
                               .addService(new GreeterImpl())
                               .build()
                               .start();
-
-        System.out.println("service start...");
+      System.out.println("service started");
 
         //程序正常退出,系统调用 System.exit方法或虚拟机被关闭时执行该调用
-        Runtime.getRuntime().addShutdownHook(new Thread() {
-
-            @Override
-            public void run() {
-                System.err.println("*** shutting down gRPC server since JVM is shutting down");
-                HelloWorldServer.this.stop();
-                System.err.println("*** server shut down");
-            }
-        });
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            System.err.println("*** shutting down gRPC server since JVM is shutting down");
+            HelloWorldServer.this.stop();
+            System.err.println("*** server shut down");
+        }));
     }
 
     private void stop() {

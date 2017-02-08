@@ -23,6 +23,7 @@ import io.grpc.stub.StreamObserver;
  * @date 2017/2/2
  */
 public class RouteGuideClient {
+
     private final ManagedChannel channel;//grpc信道,需要指定端口和地址
     private final RouteGuideGrpc.RouteGuideBlockingStub blockingStub;//阻塞/同步存根
     private final RouteGuideGrpc.RouteGuideStub asyncStub;//非阻塞,异步存根
