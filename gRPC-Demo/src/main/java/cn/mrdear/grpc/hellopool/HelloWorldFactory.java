@@ -24,4 +24,10 @@ public class HelloWorldFactory extends BasePooledObjectFactory<HelloWorldClientS
   public PooledObject<HelloWorldClientSingle> wrap(HelloWorldClientSingle helloWorldClientSingle) {
     return new DefaultPooledObject<>(helloWorldClientSingle);
   }
+
+  @Override
+  public void destroyObject(PooledObject<HelloWorldClientSingle> p) throws Exception {
+    p.getObject().shutdown();
+    super.destroyObject(p);
+  }
 }

@@ -37,7 +37,7 @@ public class HelloWorldClientPool {
   /**
    * 从连接池获取对象
    */
-  public static HelloWorldClientSingle borrowObject(){
+  private static HelloWorldClientSingle borrowObject(){
     try {
       HelloWorldClientSingle clientSingle = objectPool.borrowObject();
       System.out.println("总创建线程数"+objectPool.getCreatedCount());
@@ -47,13 +47,6 @@ public class HelloWorldClientPool {
     }
     //连接池失败则主动创建
     return createClient();
-  }
-
-  /**
-   * 还送对象
-   */
-  public static void returnObject(HelloWorldClientSingle clientSingle){
-    objectPool.returnObject(clientSingle);
   }
 
   /**
@@ -74,7 +67,7 @@ public class HelloWorldClientPool {
        workCallBack.callback(client);
       } finally {
         /** 将连接对象返回给连接池 */
-        returnObject(client);
+        objectPool.returnObject(client);
       }
     };
   }

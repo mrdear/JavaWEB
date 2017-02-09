@@ -13,7 +13,4 @@ public class HelloWorldClientTest {
       })).start();
     }
   }
-
-
-
 }
