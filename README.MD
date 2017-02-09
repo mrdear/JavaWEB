@@ -22,7 +22,7 @@
 --------------
 该demo针对具体项目所整合.主要设计mybatis多模块使用,spring多模块使用,要点就是无论什么模块,只要配置文件加载位置正确配置,就不会出问题.
 
-5.HtmlUnit-Demo
+5.HtmlUnit-Demo   
 --------------
 使用htmlUnit模拟浏览器请求,抓取Shadowsocks的一些免费账户使用,在win下配合bat脚本启动,很是方便.详情可以看项目的Main方法使用说明.
 
