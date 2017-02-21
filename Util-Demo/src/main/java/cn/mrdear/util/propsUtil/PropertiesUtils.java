@@ -36,7 +36,7 @@ public class PropertiesUtils {
 	 * @return 值
 	 */
 	public static String getClassPathProperty(String key, String fileName) {
-		InputStream input = PropertiesUtils.class.getResourceAsStream(fileName);
+		InputStream input = PropertiesUtils.class.getClassLoader().getResourceAsStream(fileName);
 		return getPropertiesFromInput(input,key);
 	}
 
