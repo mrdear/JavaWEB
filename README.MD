@@ -43,5 +43,9 @@ SpringDataJPA+QueryDSL使用,需要配合博客博文http://www.jianshu.com/p/e3
 --------------
 参考官方案例的gRPC的Demo,里面有Hello World和 RouteGuide案例,适合入门.相关博文参考 http://www.jianshu.com/nb/9491747
 
-10.待添加
+10.excel-Demo
+--------------
+使用Apache-poi封装的一个通用表单导出模块,可以很容易的迁移到项目中,配合Jackxml使用更佳
+
+11.待添加
 --------------
