@@ -73,36 +73,43 @@ public class ExcelExtractor {
       }
     }
     //开始解析表单
+    Integer lineNumber = 0;
     List<T> result = new ArrayList<T>();
-    rowIterator.forEachRemaining(x -> {
-      Map<String, Object> tempMap = new HashMap<>();
-      Iterator<Cell> cellIterator = x.cellIterator();
-      cellIterator.forEachRemaining(y -> {
-        Object value = null;
-        switch (y.getCellType()) {
-          case Cell.CELL_TYPE_STRING:
-            value = y.getStringCellValue();
-            break;
-          case Cell.CELL_TYPE_BOOLEAN:
-            value = y.getBooleanCellValue();
-            break;
-          case Cell.CELL_TYPE_NUMERIC:
-            value = y.getNumericCellValue();
-            break;
-          case Cell.CELL_TYPE_ERROR:
-            value = "";
-            break;
-          case Cell.CELL_TYPE_BLANK:
-            value = "";
-            break;
-          default:
-            value = "";
-        }
-        String key = headerMapper.get(existHeader.get(y.getColumnIndex()));
-        tempMap.put(key, value);
-      });
-      result.add(BeanUtils.map2Bean(tempMap, tClass));
-    });
+    try {
+      while (rowIterator.hasNext()){
+        Row x = rowIterator.next();
+        lineNumber++;
+        Map<String, Object> tempMap = new HashMap<>();
+        Iterator<Cell> cellIterator = x.cellIterator();
+        cellIterator.forEachRemaining(y -> {
+          Object value = null;
+          switch (y.getCellType()) {
+            case Cell.CELL_TYPE_STRING:
+              value = y.getStringCellValue();
+              break;
+            case Cell.CELL_TYPE_BOOLEAN:
+              value = y.getBooleanCellValue();
+              break;
+            case Cell.CELL_TYPE_NUMERIC:
+              value = y.getNumericCellValue();
+              break;
+            case Cell.CELL_TYPE_ERROR:
+              value = "";
+              break;
+            case Cell.CELL_TYPE_BLANK:
+              value = "";
+              break;
+            default:
+              value = "";
+          }
+          String key = headerMapper.get(existHeader.get(y.getColumnIndex()));
+          tempMap.put(key, value);
+        });
+        result.add(BeanUtils.map2Bean(tempMap, tClass));
+      }
+    } catch (Exception e) {
+      logger.error("第{}行解析错误",lineNumber);
+    }
     return result;
   }
 }
