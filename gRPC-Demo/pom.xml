@@ -7,7 +7,7 @@
     <groupId>cn.mrdear.grpc</groupId>
     <artifactId>grpc</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <name>gRPC-Demo</name>
     <properties>
         <grpc.version>1.0.3</grpc.version>
     </properties>

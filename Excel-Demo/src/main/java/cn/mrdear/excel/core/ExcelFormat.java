@@ -1,24 +1,35 @@
 package cn.mrdear.excel.core;
 
-import cn.mrdear.excel.util.BeanUtils;
-import com.sun.tools.javac.comp.Todo;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+import cn.mrdear.excel.constant.ExcelType;
+import cn.mrdear.excel.util.BeanUtils;
 
 /**
  * 工具类入口
  * @author Niu Li
  * @since 2017/2/23
  */
-public class Excel {
+public class ExcelFormat {
 
+    private static Logger logger = LoggerFactory.getLogger(ExcelFormat.class);
     //该表格的工作本
     private Workbook workbook;
 
@@ -37,8 +48,8 @@ public class Excel {
      * @param content 表单内容DTO
      * @return this表单对象
      */
-    public static Excel from(LinkedHashMap<String,String> headers,List<?> content){
-        return new Excel(headers,content);
+    public static ExcelFormat from(LinkedHashMap<String,String> headers,List<?> content){
+        return new ExcelFormat(headers,content);
     }
 
     /**
@@ -47,7 +58,7 @@ public class Excel {
      * @param content 新sheet的内容
      * @return this
      */
-    public Excel andForm(LinkedHashMap<String,String> headers,List<?> content){
+    public ExcelFormat andForm(LinkedHashMap<String,String> headers,List<?> content){
         this.headers = headers;
         this.contents = content;
         return this;
@@ -58,7 +69,7 @@ public class Excel {
      * 端点方法,生成最终的表单
      * @return this
      */
-    public Excel build(String sheetName){
+    public ExcelFormat build(String sheetName){
         //创建字表
         Sheet sheet = sheetName == null ? workbook.createSheet() : workbook.createSheet(sheetName);
         //创建表头
@@ -99,8 +110,7 @@ public class Excel {
                 }
             }
         } catch (IllegalAccessException e) {
-            // todo 替换为自己项目的日志
-            e.printStackTrace();
+            logger.error("parse excel fail ",e);
         }
         //设置样式
 
@@ -109,7 +119,7 @@ public class Excel {
     /**
      * 私有化构造函数
      */
-    private Excel(LinkedHashMap<String, String> headers, List<?> contents) {
+    private ExcelFormat(LinkedHashMap<String, String> headers, List<?> contents) {
         this.headers = headers;
         this.contents = contents;
     }
@@ -125,17 +135,16 @@ public class Excel {
             workbook.write(os);
             os.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error("write excel fail ",e);
         }finally {
             try {
                 if (workbook != null) workbook.close();
             } catch (IOException e) {
-                e.printStackTrace();
+                logger.error("write excel fail ",e);
             }
         }
     }
 
-    // todo 测试在写入后关闭对其的影响
     /**
      * 结果写到一个输出流中
      * @param os 目标流
@@ -145,7 +154,7 @@ public class Excel {
             workbook.write(os);
             workbook.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error("write excel fail ",e);
         }
     }
 
@@ -155,17 +164,9 @@ public class Excel {
      * @param type 指定格式
      * @return this
      */
-    public Excel excelType(ExcelType type){
+    public ExcelFormat excelType(ExcelType type){
         workbook = type == ExcelType.XLS?new HSSFWorkbook():new XSSFWorkbook();
         return this;
-    }
-
-    /**
-     * 定义excel格式
-     */
-    public static enum ExcelType{
-        XLS,
-        XLSX
     }
 
 }

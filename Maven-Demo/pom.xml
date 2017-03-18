@@ -8,6 +8,7 @@
     <artifactId>haikong</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
+    <name>maven-demo</name>
     <modules>
         <module>haikong-core</module>
         <module>haikong-switch</module>

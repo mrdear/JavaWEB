@@ -1,12 +1,12 @@
 package cn.mrdear.excel;
 
-import cn.mrdear.excel.util.FiledName;
+import cn.mrdear.excel.util.FieldName;
 
 /**
  * @author Niu Li
  * @since 2017/2/23
  */
-class Demo {
+public class Demo {
 
     public Demo(String username, String password) {
         this.userName = username;
@@ -15,7 +15,7 @@ class Demo {
     public Demo() {
     }
     //fildName字段需要和header对应
-    @FiledName(value = "username")
+    @FieldName(value = "username")
     private String userName;
     private String passWord;
 
@@ -33,5 +33,13 @@ class Demo {
 
     public void setPassWord(String passWord) {
         this.passWord = passWord;
+    }
+
+    @Override
+    public String toString() {
+        return "Demo{" +
+            "userName='" + userName + '\'' +
+            ", passWord='" + passWord + '\'' +
+            '}';
     }
 }
