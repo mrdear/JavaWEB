@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>cn.mrdear</groupId>
-  <artifactId>commonpay</artifactId>
+  <artifactId>Pay-demo</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
 
-  <name>pay-demo</name>
+  <name>Pay-demo</name>
   <url>http://maven.apache.org</url>
 
   <properties>

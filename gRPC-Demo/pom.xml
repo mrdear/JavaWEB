@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.mrdear.grpc</groupId>
-    <artifactId>grpc</artifactId>
+    <artifactId>gRPC-Demo</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>gRPC-Demo</name>
     <properties>

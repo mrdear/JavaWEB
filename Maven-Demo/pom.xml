@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.haikong</groupId>
-    <artifactId>haikong</artifactId>
+    <artifactId>Maven-demo</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
-    <name>maven-demo</name>
+    <name>Maven-demo</name>
     <modules>
         <module>haikong-core</module>
         <module>haikong-switch</module>
