@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="haikong-core:war">
-    <output-path>$PROJECT_DIR$/haikong-core/target</output-path>
-    <root id="archive" name="core.war">
-      <element id="artifact" artifact-name="haikong-core:war exploded" />
-    </root>
-  </artifact>
-</component>
