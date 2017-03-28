@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.mrdear</groupId>
-    <artifactId>Html-Unit-Demo</artifactId>
+    <artifactId>HtmlUnit-Demo</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
-    <name>Html-Unit-Demo</name>
+    <name>HtmlUnit-Demo</name>
 
     <dependencies>
 
