@@ -5,7 +5,6 @@
        xmlns:tx="http://www.springframework.org/schema/tx"
        xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:task="http://www.springframework.org/schema/task"
-       xmlns:p="http://www.springframework.org/schema/p"
        xmlns:cache="http://www.springframework.org/schema/cache"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd">
 
@@ -103,7 +102,9 @@
                        rollback-for="java.lang.Exception" />
             <tx:method name="save*" propagation="REQUIRED" read-only="false"
                        rollback-for="java.lang.Exception" />
-            <tx:method name="select*" propagation="SUPPORTS" read-only="true"/>
+            <!--查询使用只读事务-->
+            <tx:method name="find*" propagation="SUPPORTS" read-only="true"/>
+            <tx:method name="query*" propagation="SUPPORTS" read-only="true"/>
         </tx:attributes>
     </tx:advice>
 

@@ -1,4 +1,4 @@
-package cn.mrdear.service;
+package cn.mrdear.service.impl;
 
 import org.springframework.stereotype.Service;
 
@@ -8,13 +8,15 @@ import javax.annotation.Resource;
 
 import cn.mrdear.entity.Book;
 import cn.mrdear.mapper.BookMapper;
+import cn.mrdear.service.BookService;
 
 /**
  * @author Niu Li
- * @date 2017/1/23
+ * @since  2017/1/23
  */
 @Service
-public class BookServiceImpl implements BookService{
+public class BookServiceImpl implements BookService {
+
     @Resource
     private BookMapper bookMapper;
 
