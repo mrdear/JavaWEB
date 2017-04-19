@@ -60,9 +60,6 @@
     <!--</mvc:interceptors>-->
     <!--拦截器结束-->
 
-    <!-- 全局异常配置 -->
-    <!--<bean id="exceptionResolver" class="cn.edu.aust.exception.exceptionSolver"/>-->
-
 
     <!-- 文件上传 -->
     <bean id="multipartResolver"

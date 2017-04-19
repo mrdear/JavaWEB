@@ -15,6 +15,5 @@ public interface BookService {
      * 查询所有的books
      * @return 结果集
      */
-    @Cacheable(cacheNames = "bookcache")
     List<Book> findAll();
 }

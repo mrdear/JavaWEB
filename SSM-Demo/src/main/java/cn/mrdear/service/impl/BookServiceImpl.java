@@ -1,5 +1,6 @@
 package cn.mrdear.service.impl;
 
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,6 +22,7 @@ public class BookServiceImpl implements BookService {
     private BookMapper bookMapper;
 
     @Override
+    @Cacheable(cacheNames = "bookcache")
     public List<Book> findAll() {
         List<Book> books = bookMapper.selectAll();
         System.out.println("测试缓存,如果缓存开启,多次请求则该方法会执行一次");
