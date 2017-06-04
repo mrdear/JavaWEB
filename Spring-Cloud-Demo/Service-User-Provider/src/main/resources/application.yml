@@ -1,0 +1,20 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: service-user-provider
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    platform: h2
+    schema: classpath:database/schema.sql
+    data: classpath:database/data.sql
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true

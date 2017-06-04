@@ -1,0 +1,18 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: service-product-consumer-ribbon
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+  instance:
+      prefer-ip-address: true
+
+# 负载均衡配置为随机,不配置默认轮询
+user-resporitory:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
