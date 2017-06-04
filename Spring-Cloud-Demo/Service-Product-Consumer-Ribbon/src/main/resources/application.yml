@@ -13,6 +13,6 @@ eureka:
       prefer-ip-address: true
 
 # 负载均衡配置为随机,不配置默认轮询
-user-resporitory:
+service-user-provider:
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule

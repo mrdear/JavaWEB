@@ -1,9 +1,9 @@
 server:
-  port: 8085
+  port: 8086
 
 spring:
   application:
-    name: service-product-consumer-fegin
+    name: service-product-consumer-fegin-hystrix
 
 eureka:
   client:
@@ -12,8 +12,9 @@ eureka:
   instance:
     prefer-ip-address: true
 
+#开启断路器
 feign:
-  httpclient:
+  hystrix:
     enabled: true
 
 # 负载均衡配置为随机,不配置默认轮询

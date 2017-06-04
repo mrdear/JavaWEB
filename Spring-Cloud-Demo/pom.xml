@@ -14,6 +14,7 @@
         <module>Service-User-Provider</module>
         <module>Service-Product-Consumer-Ribbon</module>
         <module>Service-Product-Consumer-Feign</module>
+        <module>Service-Product-Consumer-Feign-Hystrix</module>
     </modules>
 
     <!--Spring Boot依赖-->
