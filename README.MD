@@ -51,5 +51,9 @@ SpringDataJPA+QueryDSL使用,需要配合博客博文http://www.jianshu.com/p/e3
 --------------
 SpringDataRedis学习的一个Demo,内容不多,配合博文:[redis学习记录(四)-SpringDataRedis分析](http://mrdear.cn/2017/03/29/linux/redis%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95(%E5%9B%9B)-SpringDataRedis%E5%88%86%E6%9E%90/)可以很好的入手
 
-12.待添加
+12.Spring-Cloud-Demo
+--------------
+学习Spring Cloud的一个Demo,其中对于Eureka,Ribbon,Feign等都有相应的Demo,相应博文会更新在[我的博客](mrdear.cn)上,希望对你有帮助
+
+13.待添加
 --------------
