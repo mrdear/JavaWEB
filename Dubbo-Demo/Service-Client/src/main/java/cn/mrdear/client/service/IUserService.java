@@ -6,7 +6,7 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * 用户服务
+ * 用户服务,一般都会在返回层再包裹一层,这里简而化之
  * @author Niu Li
  * @since 2017/6/12
  */
@@ -27,6 +27,11 @@ public interface IUserService {
    * @return 返回更新后的实体
    */
   UserDTO updateById(UserDTO userDTO);
+
+  /**
+   * 根据id删除用户
+   */
+  Boolean deleteById(Long id);
 
 
 }

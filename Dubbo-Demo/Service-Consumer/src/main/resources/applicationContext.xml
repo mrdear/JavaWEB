@@ -3,7 +3,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:task="http://www.springframework.org/schema/task"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd     http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd     http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
     <!-- 启用注解 -->
     <context:annotation-config/>
@@ -11,5 +12,19 @@
     <task:annotation-driven/>
 
     <context:component-scan base-package="cn.mrdear.consumer"/>
+
+    <!-- 提供方应用信息，用于计算依赖关系 -->
+    <dubbo:application name="user_consumer" />
+
+    <!-- 使用zookeeper注册中心暴露服务地址 -->
+    <dubbo:registry address="zookeeper://127.0.0.1:2181" />
+
+    <!--配置本地地址-->
+    <dubbo:protocol host="127.0.0.1"/>
+
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:reference interface="cn.mrdear.client.service.IUserService" id="userService"
+                     check="false" retries="2" cluster="failover" loadbalance="roundrobin"
+                     cache="lru" version="1.0.0"/>
 
 </beans>

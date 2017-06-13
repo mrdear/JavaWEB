@@ -1,4 +1,6 @@
-package cn.mrdear.consumer.manager.impl;
+package cn.mrdear.consumer.manager;
+
+import cn.mrdear.client.dto.UserDTO;
 
 /**
  * manager
@@ -7,5 +9,7 @@ package cn.mrdear.consumer.manager.impl;
  */
 
 public interface UserManager {
+
+  UserDTO findById(Long id);
 
 }

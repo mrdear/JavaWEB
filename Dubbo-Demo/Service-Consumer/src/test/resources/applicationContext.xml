@@ -22,6 +22,6 @@
 
     <!-- 声明需要暴露的服务接口 -->
     <dubbo:reference interface="cn.mrdear.client.service.IUserService" id="userService"
-                     check="false" />
+                     check="false" version="1.0.0"/>
 
 </beans>
