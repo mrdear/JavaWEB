@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xmlns:cache="http://www.springframework.org/schema/cache"
+       xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd     http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd">
+
+    <!-- 启用注解 -->
+    <context:annotation-config />
+    <!--启动定时器-->
+    <task:annotation-driven/>
+
+    <context:component-scan base-package="cn.mrdear.provider" />
+
+    <!-- 加载数据库配置文件 -->
+    <context:property-placeholder location="classpath:db.properties"/>
+    <!--配置数据库连接池Druid-->
+    <!--<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">-->
+        <!--&lt;!&ndash; 数据库基本信息配置 &ndash;&gt;-->
+        <!--<property name="url" value="${jdbc.url}" />-->
+        <!--<property name="username" value="${jdbc.username}" />-->
+        <!--<property name="password" value="${jdbc.password}" />-->
+        <!--<property name="driverClassName" value="${jdbc.driver}" />-->
+        <!--<property name="filters" value="${filters}" />-->
+        <!--&lt;!&ndash; 最大并发连接数 &ndash;&gt;-->
+        <!--<property name="maxActive" value="${maxActive}" />-->
+        <!--&lt;!&ndash; 初始化连接数量 &ndash;&gt;-->
+        <!--<property name="initialSize" value="${initialSize}" />-->
+        <!--&lt;!&ndash; 配置获取连接等待超时的时间 &ndash;&gt;-->
+        <!--<property name="maxWait" value="${maxWait}" />-->
+        <!--&lt;!&ndash; 最小空闲连接数 &ndash;&gt;-->
+        <!--<property name="minIdle" value="${minIdle}" />-->
+        <!--&lt;!&ndash; 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 &ndash;&gt;-->
+        <!--<property name="timeBetweenEvictionRunsMillis" value="${timeBetweenEvictionRunsMillis}" />-->
+        <!--&lt;!&ndash; 配置一个连接在池中最小生存的时间，单位是毫秒 &ndash;&gt;-->
+        <!--<property name="minEvictableIdleTimeMillis" value="${minEvictableIdleTimeMillis}" />-->
+        <!--<property name="validationQuery" value="SELECT 1" />-->
+        <!--<property name="testWhileIdle" value="${testWhileIdle}" />-->
+        <!--<property name="testOnBorrow" value="${testOnBorrow}" />-->
+        <!--<property name="testOnReturn" value="${testOnReturn}" />-->
+        <!--<property name="maxOpenPreparedStatements" value="${maxOpenPreparedStatements}" />-->
+        <!--&lt;!&ndash; 打开removeAbandoned功能 &ndash;&gt;-->
+        <!--<property name="removeAbandoned" value="${removeAbandoned}" />-->
+        <!--&lt;!&ndash; 1800秒，也就是30分钟 &ndash;&gt;-->
+        <!--<property name="removeAbandonedTimeout" value="${removeAbandonedTimeout}" />-->
+        <!--&lt;!&ndash; 关闭abanded连接时输出错误日志 &ndash;&gt;-->
+        <!--<property name="logAbandoned" value="${logAbandoned}" />-->
+    <!--</bean>-->
+
+    <bean id="dataSource" class="org.h2.jdbcx.JdbcConnectionPool"
+          destroy-method="dispose">
+        <constructor-arg>
+            <bean class="org.h2.jdbcx.JdbcDataSource">
+                <!-- 内存模式 -->
+                <property name="URL" value="jdbc:h2:mem:test" />
+                <!-- 文件模式 -->
+                 <!--<property name="URL" value="jdbc:h2:testRestDB" /> -->
+                <property name="user" value="sa" />
+                <property name="password" value="sa" />
+            </bean>
+        </constructor-arg>
+    </bean>
+
+    <!-- 初始化数据表结构 -->
+    <jdbc:initialize-database data-source="dataSource"
+                              ignore-failures="ALL">
+        <jdbc:script location="classpath:/h2/schema.sql" />
+        <jdbc:script location="classpath:/h2/data.sql" />
+    </jdbc:initialize-database>
+
+    <!--第二步-->
+    <!--定义实体的工厂bean-->
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <!--实体类位置-->
+        <property name="packagesToScan" value="cn.mrdear.provider.domain"/>
+        <!--持久化单元名-->
+        <property name="persistenceUnitName" value="TestJPA" />
+        <!--JPA提供者-->
+        <property name="persistenceProviderClass" value="org.hibernate.ejb.HibernatePersistence"/>
+        <!--JPA属性-->
+        <property name="jpaProperties">
+            <props>
+                <!--配置方言-->
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+                <!--激活查询日志功能-->
+                <prop key="hibernate.show_sql">false</prop>
+                <!--优雅地输出Sql-->
+                <prop key="hibernate.format_sql">false</prop>
+                <!--添加一条解释型标注-->
+                <prop key="hibernate.use_sql_comments">false</prop>
+                <!--配置如何根据java模型生成数据库表结构,常用update,validate-->
+                <prop key="hibernate.hbm2ddl.auto">none</prop>
+            </props>
+        </property>
+    </bean>
+
+
+    <!--第三步-->
+    <!--定义事务管理器-->
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+
+    <!--第四步-->
+    <!--定义repository接口的存放目录-->
+    <!--定义接口实现的后缀，通常用Impl-->
+    <!--定义实体工厂的引用-->
+    <!--定义事务管理器的引用-->
+    <jpa:repositories base-package="cn.mrdear.provider.dao"
+                      repository-impl-postfix="Impl"
+                      entity-manager-factory-ref="entityManagerFactory"
+                      transaction-manager-ref="transactionManager"/>
+
+
+
+    <!-- 具体的实现bean -->
+    <bean id="userService" class="cn.mrdear.provider.service.UserServiceImpl" />
+
+    <!-- 提供方应用信息，用于计算依赖关系 -->
+    <dubbo:application name="user_provider" />
+
+    <!-- 使用multicast广播注册中心暴露服务地址 -->
+    <!--<dubbo:registry address="multicast://224.5.6.7:1234" /> -->
+
+    <!-- 使用zookeeper注册中心暴露服务地址,即zookeeper的所在服务器ip地址和端口号 -->
+    <dubbo:registry address="zookeeper://127.0.0.1:2181" />
+
+    <!-- 用dubbo协议在20880端口暴露服务 -->
+    <dubbo:protocol name="dubbo" port="20880" />
+
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:service interface="cn.mrdear.client.service.IUserService"
+                   ref="userService" />
+</beans>
