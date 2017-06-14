@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xmlns:motan="http://api.weibo.com/schema/motan"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd     http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd   http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd   http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd http://api.weibo.com/schema/motan http://api.weibo.com/schema/motan.xsd">
+
+    <!-- 启用注解 -->
+    <context:annotation-config/>
+    <!--启动定时器-->
+    <task:annotation-driven/>
+
+    <context:component-scan base-package="cn.mrdear.provider"/>
+
+    <bean id="dataSource" class="org.h2.jdbcx.JdbcConnectionPool"
+          destroy-method="dispose">
+        <constructor-arg>
+            <bean class="org.h2.jdbcx.JdbcDataSource">
+                <!-- 内存模式 -->
+                <property name="URL" value="jdbc:h2:mem:test;MODE=MySql;DB_CLOSE_DELAY=-1"/>
+                <!-- 文件模式 -->
+                <!--<property name="URL" value="jdbc:h2:testRestDB" /> -->
+                <property name="user" value="sa"/>
+                <property name="password" value="sa"/>
+            </bean>
+        </constructor-arg>
+    </bean>
+
+    <!-- 初始化数据表结构 -->
+    <jdbc:initialize-database data-source="dataSource"
+                              ignore-failures="ALL">
+        <jdbc:script location="classpath:/h2/schema.sql"/>
+        <jdbc:script location="classpath:/h2/data.sql"/>
+    </jdbc:initialize-database>
+
+    <!--第二步-->
+    <!--定义实体的工厂bean-->
+    <bean id="entityManagerFactory"
+          class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <!--实体类位置-->
+        <property name="packagesToScan" value="cn.mrdear.provider.domain"/>
+        <!--持久化单元名-->
+        <property name="persistenceUnitName" value="TestJPA"/>
+        <!--JPA提供者-->
+        <property name="persistenceProviderClass" value="org.hibernate.ejb.HibernatePersistence"/>
+        <!--JPA属性-->
+        <property name="jpaProperties">
+            <props>
+                <!--配置方言-->
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+                <!--激活查询日志功能-->
+                <prop key="hibernate.show_sql">false</prop>
+                <!--优雅地输出Sql-->
+                <prop key="hibernate.format_sql">false</prop>
+                <!--添加一条解释型标注-->
+                <prop key="hibernate.use_sql_comments">false</prop>
+                <!--配置如何根据java模型生成数据库表结构,常用update,validate-->
+                <prop key="hibernate.hbm2ddl.auto">none</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!--第三步-->
+    <!--定义repository接口的存放目录-->
+    <!--定义接口实现的后缀，通常用Impl-->
+    <!--定义实体工厂的引用-->
+    <!--定义事务管理器的引用-->
+    <jpa:repositories base-package="cn.mrdear.provider.dao"
+                      repository-impl-postfix="Impl"
+                      entity-manager-factory-ref="entityManagerFactory"/>
+
+    <!-- 具体的实现bean -->
+    <bean id="userService" class="cn.mrdear.provider.service.UserServiceImpl"/>
+
+    <motan:protocol id="motan-provider" name="provider"/>
+
+    <motan:registry regProtocol="zookeeper" name="my_zookeeper" address="127.0.0.1:2181"/>
+
+    <motan:service interface="cn.mrdear.client.service.IUserService" ref="userService"
+                   registry="my_zookeeper" export="8002" />
+
+</beans>
