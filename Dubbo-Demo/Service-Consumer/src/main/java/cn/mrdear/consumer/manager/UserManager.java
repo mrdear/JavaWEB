@@ -12,4 +12,6 @@ public interface UserManager {
 
   UserDTO findById(Long id);
 
+  UserDTO findByIdBack(Long id);
+
 }

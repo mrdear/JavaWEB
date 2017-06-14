@@ -4,7 +4,8 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:task="http://www.springframework.org/schema/task"
        xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd     http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd     http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <!-- 启用注解 -->
     <context:annotation-config/>
@@ -12,6 +13,11 @@
     <task:annotation-driven/>
 
     <context:component-scan base-package="cn.mrdear.consumer"/>
+
+    <!--断路器配置-->
+    <aop:aspectj-autoproxy/>
+    <bean id="hystrixAspect"
+          class="com.netflix.hystrix.contrib.javanica.aop.aspectj.HystrixCommandAspect"/>
 
     <!-- 提供方应用信息，用于计算依赖关系 -->
     <dubbo:application name="user_consumer" />
