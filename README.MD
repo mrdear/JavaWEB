@@ -55,9 +55,13 @@ SpringDataRedis学习的一个Demo,内容不多,配合博文:[redis学习记录(
 --------------
 学习Spring Cloud的一个Demo,其中对于Eureka,Ribbon,Feign等都有相应的Demo,相应博文会更新在[我的博客](mrdear.cn)上,希望对你有帮助
 
-13.Spring-Cloud-Demo
+13.Dubbo-Demo
 --------------
 增加Dubbo-Demo,一个基本的RPC调用Demo
 
-14.待添加
+14.Motan-Demo
+--------------
+增加Motan-Demo,一个基本的RPC调用Demo
+
+15.待添加
 --------------
