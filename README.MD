@@ -63,5 +63,9 @@ SpringDataRedis学习的一个Demo,内容不多,配合博文:[redis学习记录(
 --------------
 增加Motan-Demo,一个基本的RPC调用Demo
 
-15.待添加
+15.Spring-Security-Demo
+--------------
+增加Spring Security Demo,项目中使用了JWT Token验证机制,该项目可以很好的了解整个流程的作用,需要配合我博客中Spring Security相关博文食用.
+
+16.待添加
 --------------
