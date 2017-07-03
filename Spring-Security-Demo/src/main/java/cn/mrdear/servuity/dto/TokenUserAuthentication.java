@@ -33,7 +33,7 @@ public class TokenUserAuthentication implements Authentication {
 
   @Override
   public Object getCredentials() {
-    return userDTO.getPassword();
+    return "";
   }
 
   @Override
