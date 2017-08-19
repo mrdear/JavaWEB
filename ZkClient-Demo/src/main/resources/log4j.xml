@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration>
+
+    <!-- 将日志信息输出到控制台 -->
+    <appender name="ConsoleAppender" class="org.apache.log4j.ConsoleAppender">
+        <!-- 设置日志输出的样式 -->
+        <layout class="org.apache.log4j.PatternLayout">
+            <!-- 设置日志输出的格式 -->
+            <param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss:SSS}] [%-5p] [method:%l]%n%m%n%n" />
+        </layout>
+        <!--过滤器设置输出的级别-->
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <!-- 设置日志输出的最小级别 -->
+            <param name="levelMin" value="WARN" />
+            <!-- 设置日志输出的最大级别 -->
+            <param name="levelMax" value="ERROR" />
+            <!-- 设置日志输出的xxx，默认是false -->
+            <param name="AcceptOnMatch" value="true" />
+        </filter>
+    </appender>
+
+    <!--
+     注意：
+     1：当additivity="false"时，root中的配置就失灵了，不遵循缺省的继承机制
+     2：logger中的name非常重要，它代表记录器的包的形式，有一定的包含关系，试验表明
+        2-1：当定义的logger的name同名时，只有最后的那一个才能正确的打印日志
+        2-2：当对应的logger含有包含关系时，比如：name=test.log4j.test8 和 name=test.log4j.test8.UseLog4j，则2-1的情况是一样的
+        2-3：logger的name表示所有的包含在此名的所有记录器都遵循同样的配置，name的值中的包含关系是指记录器的名称哟！注意啦！
+     3：logger中定义的level和appender中的filter定义的level的区间取交集
+     4：如果appender中的filter定义的 levelMin > levelMax ，则打印不出日志信息
+     -->
+
+    <!-- 根logger的设置-->
+    <root>
+        <level value ="DEBUG"/>
+        <appender-ref ref="ConsoleAppender"/>
+        <!--<appender-ref ref="DailyRollingFileAppender"/>-->
+    </root>
+
+</log4j:configuration>
