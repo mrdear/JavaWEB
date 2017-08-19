@@ -1,4 +1,4 @@
-package cn.mrdear.servuity.controller;
+package cn.mrdear.security.controller;
 
 import com.google.common.collect.Lists;
 
@@ -8,8 +8,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import cn.mrdear.servuity.dto.TokenUserDTO;
-import cn.mrdear.servuity.util.JwtTokenUtil;
+import cn.mrdear.security.dto.TokenUserDTO;
+import cn.mrdear.security.util.JwtTokenUtil;
 
 import javax.annotation.Resource;
 

@@ -1,11 +1,11 @@
-package cn.mrdear.servuity.util;
+package cn.mrdear.security.util;
 
 import org.apache.commons.lang3.math.NumberUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 
-import cn.mrdear.servuity.dto.TokenUserAuthentication;
-import cn.mrdear.servuity.dto.TokenUserDTO;
+import cn.mrdear.security.dto.TokenUserAuthentication;
+import cn.mrdear.security.dto.TokenUserDTO;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

@@ -1,4 +1,4 @@
-package cn.mrdear.servuity.config;
+package cn.mrdear.security.config;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -6,7 +6,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import cn.mrdear.servuity.util.JwtTokenUtil;
+import cn.mrdear.security.util.JwtTokenUtil;
 import io.jsonwebtoken.JwtException;
 
 import javax.servlet.FilterChain;

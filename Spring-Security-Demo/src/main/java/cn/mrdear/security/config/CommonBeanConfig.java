@@ -1,9 +1,9 @@
-package cn.mrdear.servuity.config;
+package cn.mrdear.security.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import cn.mrdear.servuity.util.JwtTokenUtil;
+import cn.mrdear.security.util.JwtTokenUtil;
 
 /**
  * 配置一些线程安全的工具类

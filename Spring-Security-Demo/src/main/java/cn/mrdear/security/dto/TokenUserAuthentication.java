@@ -1,4 +1,4 @@
-package cn.mrdear.servuity.dto;
+package cn.mrdear.security.dto;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;

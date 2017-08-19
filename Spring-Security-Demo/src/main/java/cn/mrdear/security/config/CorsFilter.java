@@ -1,4 +1,4 @@
-package cn.mrdear.servuity.config;
+package cn.mrdear.security.config;
 
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;

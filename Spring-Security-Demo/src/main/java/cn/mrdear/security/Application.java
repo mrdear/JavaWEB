@@ -1,4 +1,4 @@
-package cn.mrdear.servuity;
+package cn.mrdear.security;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
